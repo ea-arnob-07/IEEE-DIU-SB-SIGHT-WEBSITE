@@ -1,0 +1,3979 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE DIU SB SIGHT Group Idea Competition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+          
+            box-sizing: border-box; */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+           
+
+
+ width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+
+
+
+
+
+
+        }
+
+       nav {
+    background: linear-gradient(135deg, rgba(10, 22, 50, 0.92) 0%, rgba(8, 16, 38, 0.95) 100%);
+    padding: 0.6rem 0;  /* Reduced from 1rem */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.05), 0 4px 20px rgba(0,0,0,0.3);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+nav .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;  /* Reduced from 2rem */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: white;
+    font-size: 1.1rem;  /* Reduced from 1.5rem */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;  /* Reduced from 0.5rem */
+}
+
+nav .logo img {
+    height: 35px;  /* Reduced from 50px */
+    width: 35px;   /* Reduced from 50px */
+    object-fit: contain;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.6rem;  /* Reduced from 1rem */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+    padding: 0.4rem 0;  /* Reduced from 0.5rem */
+    font-size: 0.9rem;  /* Added smaller font */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(171, 21, 21);
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: rgb(224, 9, 9);
+    font-size: 1.3rem;  /* Reduced from 1.5rem */
+    cursor: pointer;
+}
+
+/* Responsive *//* Mobile এ সব transition speed কমানো */
+@media (max-width: 768px) {
+    /* সব element এর জন্য transition time কমানো */
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.15s !important;
+        animation-duration: 0.3s !important;
+    }
+    
+    /* Navigation এর জন্য একটু বেশি রাখা */
+
+
+    
+    nav a,
+    .btn,
+    .mobile-menu-btn {
+        transition-duration: 0.2s !important;
+    }
+    
+    /* Animation disable করতে চাইলে */
+    .about-card,
+    .focus-item,
+    .eligibility-box,
+    .timeline-item,
+    .criteria-item,
+    .prize-card,
+    .contact-card,
+    .faq-item,
+    .focus-area-card,
+    .fee-card,
+    .instruction-step {
+        animation: none !important;
+    }
+}
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, #122b55 0%, #0c1f3d 100%);
+        padding: 0.8rem;
+        gap: 0.3rem;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    nav a {
+        font-size: 0.85rem;
+        padding: 0.5rem 0;
+    }
+}
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section - Enhanced */
+        .hero {
+            background: linear-gradient(135deg, #0a1628 0%, #0f2240 35%, #162d55 65%, #1a3a6c 100%);
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+              height: 100vh;
+               min-height: calc(var(--vh, 1vh) * 100);
+  height: auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,60 Q300,0 600,60 T1200,60 L1200,0 L0,0 Z" fill="rgba(96, 165, 250,0.15)"/></svg>') repeat-x;
+            animation: wave 20s linear infinite;
+        }
+
+        @keyframes wave {
+            0% { background-position: 0 0; }
+            100% { background-position: 1200px 0; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-family: 'Playfair Display', Georgia, serif;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3), 0 0 60px rgba(59,130,246,0.15);
+        }
+
+        .hero h2 {
+            font-size: 2.2rem;
+            font-family: 'Playfair Display', Georgia, serif;
+            letter-spacing: -0.01em;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1.2s;
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1.4s;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.6s;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4), 0 0 40px rgba(59, 130, 246, 0.1);
+        }
+         
+
+        .btn-secondary {
+            background: rgba(96, 165, 250, 0.15);
+            color: white;
+            border: 2px solid #3b82f6;
+            backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+        .btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 3rem;
+            font-family: 'Playfair Display', Georgia, serif;
+            letter-spacing: -0.02em;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+            background: linear-gradient(135deg, #1a4a7a, #122b55);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #1e5a9e;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .section-alt {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 50%, #f0f7ff 100%);
+        }
+
+        /* About Section - Enhanced */
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            background: rgba(255,255,255,0.85);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.04), 0 16px 32px rgba(0,0,0,0.06);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: slideInUp 0.6s ease-out both;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.6);
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #3b82f6, #1e5a9e);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .about-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .about-card:nth-child(1) { animation-delay: 0.1s; }
+        .about-card:nth-child(2) { animation-delay: 0.2s; }
+        .about-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .about-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.25);
+        }
+
+        .about-card h3 {
+            color: #1a4a7a;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about-card p {
+            color: #1e5a9e;
+            line-height: 1.8;
+        }
+
+        /* Focus Areas - Enhanced */
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .focus-item {
+            background: rgba(255,255,255,0.85);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.04), 0 16px 32px rgba(0,0,0,0.06);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: zoomIn 0.6s ease-out both;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.6);
+        }
+
+        .focus-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(96, 165, 250, 0.15), rgba(59, 130, 246, 0.15));
+            transform: translate(-50%, -50%);
+            transition: all 0.5s ease;
+        }
+
+        .focus-item:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .focus-item:nth-child(1) { animation-delay: 0.1s; }
+        .focus-item:nth-child(2) { animation-delay: 0.2s; }
+        .focus-item:nth-child(3) { animation-delay: 0.3s; }
+        .focus-item:nth-child(4) { animation-delay: 0.4s; }
+        .focus-item:nth-child(5) { animation-delay: 0.5s; }
+        .focus-item:nth-child(6) { animation-delay: 0.6s; }
+
+        .focus-item:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+        }
+
+        .focus-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+            position: relative;
+            z-index: 1;
+        }
+
+        .focus-item h4 {
+            position: relative;
+            z-index: 1;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        /* Enhanced Eligibility Section */
+        .eligibility-section {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 50%, #f0f7ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .eligibility-section::before {
+            content: '🌿';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.04;
+            top: -3rem;
+            right: -3rem;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .eligibility-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .eligibility-box {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: slideInUp 0.6s ease-out both;
+        }
+
+        .eligibility-box:nth-child(1) { animation-delay: 0.1s; }
+        .eligibility-box:nth-child(2) { animation-delay: 0.2s; }
+
+        .eligibility-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #3b82f6, #1e5a9e);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .eligibility-box::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(96, 165, 250, 0.08) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .eligibility-box:hover::before {
+            transform: scaleX(1);
+        }
+
+        .eligibility-box:hover::after {
+            opacity: 1;
+        }
+
+        .eligibility-box:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.25);
+        }
+
+        .eligibility-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .eligibility-emoji {
+            font-size: 4rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .eligibility-box h3 {
+            color: #1a4a7a;
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .eligibility-box ul {
+            list-style: none;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .eligibility-box li {
+            padding: 1.2rem 1.8rem;
+            margin: 1rem 0;
+            background: linear-gradient(135deg, #eff6ff 0%, #93c5fd 100%);
+            border-left: 5px solid #2670b8;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            transition: all 0.3s ease;
+            animation: fadeIn 0.6s ease-out both;
+            font-size: 1.05rem;
+        }
+
+        .eligibility-box li:nth-child(1) { animation-delay: 0.2s; }
+        .eligibility-box li:nth-child(2) { animation-delay: 0.3s; }
+        .eligibility-box li:nth-child(3) { animation-delay: 0.4s; }
+        .eligibility-box li:nth-child(4) { animation-delay: 0.5s; }
+        .eligibility-box li:nth-child(5) { animation-delay: 0.6s; }
+        .eligibility-box li:nth-child(6) { animation-delay: 0.7s; }
+
+        .eligibility-box li:hover {
+            transform: translateX(15px);
+            background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%);
+            border-left-color: #1e5a9e;
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.25);
+        }
+
+        .eligibility-box li::before {
+            content: '✓';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #3b82f6, #2670b8);
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            flex-shrink: 0;
+            box-shadow: 0 3px 10px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Timeline - Tree Design */
+        .timeline-section {
+            background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+            position: relative;
+        }
+
+        .timeline-tree {
+            position: relative;
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 2rem;
+        }
+
+        /* Tree trunk */
+        .timeline-tree::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            background: linear-gradient(180deg, #3b82f6, #2670b8, #1e5a9e);
+            transform: translateX(-50%);
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 4rem;
+            animation: slideIn 0.8s ease-out both;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+        .timeline-item:nth-child(5) { animation-delay: 0.5s; }
+
+        /* Alternating sides */
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: calc(50% + 60px);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: calc(50% + 60px);
+            text-align: right;
+        }
+
+        border: 1px solid rgba(255,255,255,0.6);
+            backdrop-filter: blur(10px);
+            .timeline-content {
+            padding: 2rem;
+            background: rgba(255,255,255,0.9);
+            border-radius: 20px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.04), 0 16px 32px rgba(0,0,0,0.06);
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Branch lines */
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #2670b8);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            left: -50px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            right: -50px;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.25);
+        }
+
+        /* Timeline dots (tree nodes) */
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3b82f6, #2670b8);
+            border: 5px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 8px rgba(96, 165, 250, 0.2), 0 5px 15px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            z-index: 2;
+            animation: dotPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes dotPulse {
+            0%, 100% {
+                box-shadow: 0 0 0 8px rgba(96, 165, 250, 0.2), 0 5px 15px rgba(0,0,0,0.2);
+            }
+            50% {
+                box-shadow: 0 0 0 15px rgba(96, 165, 250, 0.1), 0 8px 20px rgba(0,0,0,0.3);
+            }
+        }
+
+        .timeline-content h3 {
+            color: #1a4a7a;
+            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content h3 {
+            justify-content: flex-end;
+        }
+
+        .timeline-date {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #1e5a9e;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: #2670b8;
+            line-height: 1.8;
+        }
+
+        /* Judging Criteria - Enhanced */
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .criteria-item {
+            text-align: center;
+            padding: 2.5rem;
+            background: rgba(255,255,255,0.85);
+            border-radius: 20px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.04), 0 16px 32px rgba(0,0,0,0.06);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: zoomIn 0.6s ease-out both;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.6);
+        }
+
+        .criteria-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(96, 165, 250, 0.08), rgba(59, 130, 246, 0.08));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .criteria-item:hover::before {
+            opacity: 1;
+        }
+
+        .criteria-item:nth-child(1) { animation-delay: 0.1s; }
+        .criteria-item:nth-child(2) { animation-delay: 0.2s; }
+        .criteria-item:nth-child(3) { animation-delay: 0.3s; }
+        .criteria-item:nth-child(4) { animation-delay: 0.4s; }
+        .criteria-item:nth-child(5) { animation-delay: 0.5s; }
+
+        .criteria-item:hover {
+            transform: translateY(-15px) rotate(3deg);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+        }
+
+        .criteria-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+            position: relative;
+            z-index: 1;
+        }
+
+        .criteria-item h3 {
+            color: #1a4a7a;
+            margin-bottom: 0.8rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .criteria-item p {
+            color: #1e5a9e;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Prizes - Enhanced */
+        .prizes-section {
+            background: linear-gradient(160deg, #0a1628 0%, #0f2240 40%, #162d55 70%, #1a3a6c 100%);
+            color: white;
+        }
+
+        .prizes-section h2 {
+            color: white;
+            -webkit-text-fill-color: white;
+        }
+
+        .prizes-section .section-subtitle {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .prizes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .prize-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: slideInUp 0.6s ease-out both;
+            backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+        .prize-card:nth-child(1) { animation-delay: 0.1s; }
+        .prize-card:nth-child(2) { animation-delay: 0.2s; }
+        .prize-card:nth-child(3) { animation-delay: 0.3s; }
+        .prize-card:nth-child(4) { animation-delay: 0.4s; }
+        .prize-card:nth-child(5) { animation-delay: 0.5s; }
+        .prize-card:nth-child(6) { animation-delay: 0.6s; }
+
+        .prize-card:hover {
+            transform: scale(1.08) translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .prize-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .prize-card h3 {
+            color: #dbeafe;
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .prize-card p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.1rem;
+        }
+
+        /* Contact - Enhanced */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.85);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.04), 0 16px 32px rgba(0,0,0,0.06);
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: zoomIn 0.6s ease-out both;
+        }
+
+        .contact-card:nth-child(1) { animation-delay: 0.1s; }
+        .contact-card:nth-child(2) { animation-delay: 0.2s; }
+        .contact-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .contact-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.25);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .contact-card h3 {
+            color: #1a4a7a;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card p {
+            color: #1e5a9e;
+            font-size: 1.1rem;
+        }
+
+        /* FAQ - Enhanced */
+        .faq-container {
+            max-width: 900px;
+            margin: 3rem auto;
+        }
+
+        .faq-item {
+            background: rgba(255,255,255,0.85);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.04), 0 12px 24px rgba(0,0,0,0.06);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeIn 0.6s ease-out both;
+            border-left: 5px solid transparent;
+        }
+
+        .faq-item:nth-child(1) { animation-delay: 0.1s; }
+        .faq-item:nth-child(2) { animation-delay: 0.2s; }
+        .faq-item:nth-child(3) { animation-delay: 0.3s; }
+        .faq-item:nth-child(4) { animation-delay: 0.4s; }
+        .faq-item:nth-child(5) { animation-delay: 0.5s; }
+
+        .faq-item:hover {
+            transform: translateX(10px);
+            border-left-color: #3b82f6;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #1a4a7a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .faq-question span {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question span {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            margin-top: 1rem;
+            display: none;
+            color: #1e5a9e;
+            line-height: 1.8;
+        }
+
+        .faq-item.active {
+            border-left-color: #2670b8;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        /* Footer - Enhanced */
+footer {
+    background: linear-gradient(160deg, #060e1f 0%, #0a1628 50%, #0f2240 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    box-shadow: 0 -5px 20px rgba(18, 43, 85, 0.2);
+}
+
+footer p {
+    margin: 0.5rem 0;
+    opacity: 0.9;
+}
+.footer-logos {
+    display: flex;
+    justify-content: center;   /* ✔️ center */
+    align-items: center;
+    gap: 2rem;                 /* ✔️ controlled spacing */
+    flex-wrap: wrap;           /* ✔️ mobile responsive */
+}
+
+.footer-logo-item {
+    text-align: center;
+}
+
+.footer-logo-item img {
+    height: 60px;              /* ✔️ same size logos */
+    max-width: 100%;
+    object-fit: contain;
+}
+
+
+.footer-logo-item:hover {
+    transform: translateY(-10px);
+}
+
+.footer-logo-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    background: white;
+    padding: 1rem;
+    border-radius: 200px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.footer-logo-item img:hover {
+    box-shadow: 0 10px 30px rgba(96, 165, 250, 0.4);
+    transform: scale(1.05);
+}
+
+.footer-logo-item p {
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.footer-divider {
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+    margin: 2rem auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .footer-logos {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-logo-item img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: linear-gradient(135deg, #122b55 0%, #0c1f3d 100%);
+                padding: 1rem;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .eligibility-container {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-tree::before {
+                left: 30px;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 80px;
+                margin-right: 0;
+                text-align: left;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content h3 {
+                justify-content: flex-start;
+            }
+
+            .timeline-dot {
+                left: 30px;
+            }
+
+            .timeline-content::before {
+                left: -50px !important;
+                right: auto !important;
+            }
+        }
+
+        /* Instructions Section - Enhanced */
+.instructions-container {
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    position: relative;
+}
+
+.instructions-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #3b82f6, #2670b8);
+    transform: translateX(-50%);
+    border-radius: 2px;
+    display: none;
+}
+
+.instruction-step {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    animation: slideInUp 0.6s ease-out both;
+    position: relative;
+}
+
+.instruction-step:nth-child(1) { animation-delay: 0.1s; }
+.instruction-step:nth-child(2) { animation-delay: 0.2s; }
+.instruction-step:nth-child(3) { animation-delay: 0.3s; }
+.instruction-step:nth-child(4) { animation-delay: 0.4s; }
+
+.step-number {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #3b82f6, #2670b8);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+    position: relative;
+    z-index: 2;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.step-content {
+    flex: 1;
+    background: white;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    border-left: 4px solid transparent;
+}
+
+.step-content:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
+    border-left-color: #3b82f6;
+}
+
+.step-content h3 {
+    color: #1a4a7a;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.step-content p {
+    color: #1e5a9e;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.submission-options {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    margin-top: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.option-card {
+    flex: 1;
+    min-width: 160px;
+    background: linear-gradient(135deg, #eff6ff, #93c5fd);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.option-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+.option-icon {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.option-card h4 {
+    color: #122b55;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+}
+
+.option-card p {
+    color: #1e5a9e;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.option-divider {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2670b8;
+    padding: 0 0.5rem;
+}
+
+.video-tips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+}
+
+.tip-item {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    padding: 0.6rem;
+    border-radius: 8px;
+    color: #122b55;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.tip-item:hover {
+    transform: translateX(5px);
+    background: linear-gradient(135deg, #93c5fd, #60a5fa);
+}
+
+.upload-checklist {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.checklist-item {
+    background: linear-gradient(135deg, #eff6ff, #93c5fd);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    color: #122b55;
+    font-weight: 500;
+    border-left: 3px solid #2670b8;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.checklist-item:hover {
+    transform: translateX(8px);
+    background: linear-gradient(135deg, #93c5fd, #60a5fa);
+    border-left-color: #1e5a9e;
+}
+
+.important-note {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    animation: slideInUp 0.6s ease-out both;
+    animation-delay: 0.5s;
+    position: relative;
+}
+
+.note-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ffc107, #ffb300);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+    position: relative;
+    z-index: 2;
+}
+
+.note-content {
+      flex: 1;
+    background: #e4c360;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    border-left: 4px solid transparent;
+}
+
+.note-content:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.25);
+    border-left-color:     flex: 1;
+    background: white;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    border-left: 4px solid transparent;;
+}
+
+.note-content h4 {
+    color: #856404;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.note-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.note-content li {
+    padding: 0.6rem 1rem;
+    margin: 0.4rem 0;
+    background: linear-gradient(135deg, #fff9e6 0%, #ffecb3 100%);
+    border-left: 3px solid #ffc107;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: all 0.3s ease;
+    color: #856404;
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+.note-content li:hover {
+    transform: translateX(8px);
+    background: linear-gradient(135deg, #ffecb3 0%, #ffe082 100%);
+    border-left-color: #f57f17;
+    box-shadow: 0 3px 10px rgba(255, 193, 7, 0.25);
+}
+
+.note-content li::before {
+    content: '⚠';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #ffc107, #ffb300);
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(255, 193, 7, 0.3);
+    font-size: 0.8rem;
+}
+
+.note-content strong {
+    color: #d39e00;
+}
+
+/* Responsive styles for Instructions */
+@media (max-width: 768px) {
+    .instruction-step,
+    .important-note {
+        flex-direction: column;
+        gap: 0.6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .step-number,
+    .note-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+        margin: 0 auto;
+    }
+
+    .step-content,
+    .note-content {
+        padding: 1rem;
+    }
+
+    .step-content h3,
+    .note-content h4 {
+        font-size: 1.1rem;
+    }
+
+    .submission-options {
+        flex-direction: column;
+    }
+
+    .option-divider {
+        transform: rotate(90deg);
+        padding: 0.3rem 0;
+    }
+
+    .video-tips {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+/* Registration Fee Section */
+.fee-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fee-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: slideInUp 0.6s ease-out both;
+    text-align: center;
+}
+
+.fee-card:nth-child(1) { 
+    animation-delay: 0.1s; 
+}
+
+.fee-card:nth-child(2) { 
+    animation-delay: 0.2s; 
+}
+
+.fee-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #3b82f6, #1e5a9e);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.fee-card:hover::before {
+    transform: scaleX(1);
+}
+
+.fee-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(59, 130, 246, 0.25);
+}
+
+.ieee-member {
+    border: 3px solid #3b82f6;
+}
+
+.ieee-member::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, transparent 70%);
+}
+
+.fee-badge {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: linear-gradient(135deg, #ffc107, #ff9800);
+    color: white;
+    padding: 0.5rem 3rem;
+    transform: rotate(45deg);
+    font-weight: bold;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 10px rgba(255, 152, 0, 0.4);
+    letter-spacing: 1px;
+}
+
+.fee-icon {
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.fee-card h3 {
+    color: #1a4a7a;
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.fee-amount {
+    font-size: 2.8rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #3b82f6, #1e5a9e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.8rem;
+}
+
+.fee-description {
+    color: #1e5a9e;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.fee-benefits {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.fee-benefits li {
+    padding: 0.6rem 0;
+    color: #122b55;
+    font-weight: 500;
+    border-bottom: 1px solid #eff6ff;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.fee-benefits li:hover {
+    padding-left: 10px;
+    color: #1a4a7a;
+}
+
+.fee-benefits li:last-child {
+    border-bottom: none;
+}
+.fee-note {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #eff6ff 0%, #93c5fd 100%);
+    border-radius: 15px;
+    border-left: 5px solid #2670b8;
+    animation: slideInUp 0.6s ease-out both;
+    animation-delay: 0.3s;
+    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.15);
+}
+
+.note-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    color: #122b55;
+    font-size: 1.1rem;
+}
+
+.note-icon-inline {
+    font-size: 1.3rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.fee-note-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fee-note-list li {
+    padding: 0.6rem 0.8rem;
+    margin: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    color: #122b55;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    font-size: 0.95rem;
+}
+
+.fee-note-list li:hover {
+    transform: translateX(8px);
+    background: rgba(255, 255, 255, 0.9);
+    border-left-color: #1e5a9e;
+    box-shadow: 0 3px 10px rgba(59, 130, 246, 0.2);
+}
+
+.join-ieee-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.8rem;
+    background: linear-gradient(135deg, #3b82f6 0%, #2670b8 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+.join-ieee-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+.join-note {
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    color: #1e5a9e;
+    font-style: italic;
+}
+
+/* Responsive styles for Registration Fee */
+@media (max-width: 768px) {
+    .fee-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .fee-card {
+        padding: 2rem;
+    }
+    
+    .fee-amount {
+        font-size: 2.5rem;
+    }
+    
+    .fee-badge {
+        font-size: 0.7rem;
+        padding: 0.4rem 2.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hero Section - Enhanced */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    max-width: 1000px;
+padding-top: 40px;
+    margin-top: -230px;
+
+
+   
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.7);
+}
+.hero h1 {
+    font-size: 3.5rem;
+            font-family: 'Playfair Display', Georgia, serif;
+            letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3), 0 0 60px rgba(59,130,246,0.15);
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+            font-family: 'Playfair Display', Georgia, serif;
+            letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1.2s;
+    font-weight: 300;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1.4s;
+    opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1.6s;
+}
+.cta-buttons1 {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1.6s;
+}
+
+/* Slider Styles */
+.slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+
+        .slider-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgb(18 43 85 / 19%) 0%, rgba(12, 31, 61, 0.8) 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+.slider-nav {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 3;
+}
+
+.slider-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.slider-dot.active {
+    background: white;
+    transform: scale(1.3);
+    border-color: #3b82f6;
+    box-shadow: 0 0 15px rgba(96, 165, 250, 0.8);
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 3;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.slider-arrow:hover {
+    background: rgba(96, 165, 250, 0.8);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 5px 20px rgba(96, 165, 250, 0.5);
+}
+
+.slider-arrow.prev {
+    left: 30px;
+}
+
+.slider-arrow.next {
+    right: 30px;
+}
+
+/* Responsive for Slider */
+@media (max-width: 768px) {
+    .hero {
+        height: 120vh;
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .slider-arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 1.4rem;
+    }
+
+    .slider-arrow.prev {
+        left: 15px;
+    }
+
+    .slider-arrow.next {
+        right: 15px;
+    }
+}
+
+
+
+.focus-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.focus-area-card {
+    /* background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: slideInUp 0.6s ease-out both;
+    position: relative;
+    overflow: hidden;
+    border-top: 5px solid transparent;
+
+ */
+
+
+
+
+
+
+  flex: 1;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    border-left: 4px solid transparent;
+
+
+
+
+
+
+
+
+
+
+
+}
+
+.focus-area-card:nth-child(1) { 
+    animation-delay: 0.1s; 
+    border-top-color: #ffd54f;
+}
+.focus-area-card:nth-child(2) { 
+    animation-delay: 0.2s; 
+    border-top-color: #3b82f6;
+}
+.focus-area-card:nth-child(3) { 
+    animation-delay: 0.3s; 
+    border-top-color: #2196f3;
+}
+.focus-area-card:nth-child(4) { 
+    animation-delay: 0.4s; 
+    border-top-color: #00bcd4;
+}
+.focus-area-card:nth-child(5) { 
+    animation-delay: 0.5s; 
+    border-top-color: #03a9f4;
+}
+
+.focus-area-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.05), rgba(59, 130, 246, 0.05));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.focus-area-card:hover::before {
+    opacity: 1;
+}
+
+.focus-area-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.25);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.focus-icon {
+    font-size: 3rem;
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+    z-index: 1;
+}
+
+.card-title-group {
+    flex: 1;
+}
+
+.focus-area-card h3 {
+    color: #1a4a7a;
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.sdg-label {
+    display: inline-block;
+    background: linear-gradient(135deg, #3b82f6, #2670b8);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-top: 0.3rem;
+}
+
+.focus-area-card p {
+    color: #1e5a9e;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+    text-align: justify;
+}
+
+.instructions-box {
+    background: linear-gradient(135deg, #fff9e6 0%, #ffecb3 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    margin-top: 3rem;
+    border-left: 5px solid #ffc107;
+    box-shadow: 0 10px 30px rgba(255, 193, 7, 0.2);
+    animation: slideInUp 0.6s ease-out both;
+    animation-delay: 0.6s;
+}
+
+.instructions-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.instructions-icon {
+    font-size: 2.5rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.instructions-box h3 {
+    color: #856404;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.instructions-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.instructions-list li {
+    padding: 1rem 1.5rem;
+    background: white;
+    border-left: 4px solid #ffc107;
+    border-radius: 10px;
+    color: #856404;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.instructions-list li:hover {
+    transform: translateX(10px);
+    background: #fffdf7;
+    border-left-color: #f57f17;
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.2);
+}
+
+.instructions-list li::before {
+    content: '✓';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #ffc107, #ffb300);
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(255, 193, 7, 0.3);
+    margin-top: 2px;
+}
+
+.instructions-list li strong {
+    color: #d39e00;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+    section h2 {
+        font-size: 2.2rem;
+    }
+
+    .focus-areas-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .focus-area-card {
+        padding: 2rem;
+    }
+
+    .instructions-box {
+        padding: 2rem;
+    }
+
+    .card-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .focus-icon {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+/* Hero Background */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgb(18 43 85 / 19%) 0%, rgba(12, 31, 61, 0.8) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Fixed Navigation Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* Adjust based on your nav height */
+}
+
+/* Ensure sections have proper IDs and positioning */
+section {
+    position: relative;
+}
+
+/* Fix for mobile menu overlay issues */
+nav ul {
+    z-index: 999;
+}
+
+nav ul.active {
+    display: flex !important;
+}
+
+/* Prevent body scroll when mobile menu is open (optional) */
+body.menu-open {
+     overflow: hidden; /* only when menu open */
+}
+
+/* Fix clickable areas for navigation links */
+nav a {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure footer links are clickable */
+footer a {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+/* ============================================ */
+/* FIXED RESPONSIVE NAVIGATION */
+/* ============================================ */
+@media (max-width: 768px) {
+    nav ul {
+        display: none !important;
+        flex-direction: column !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: linear-gradient(135deg, #122b55 0%, #0c1f3d 100%) !important;
+        padding: 1rem !important;
+        gap: 0.5rem !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+        z-index: 999 !important;
+    }
+
+    nav ul.active {
+        display: flex !important;
+    }
+
+    .mobile-menu-btn {
+        display: block !important;
+    }
+}
+
+@media (min-width: 769px) {
+    nav ul {
+        display: flex !important;
+        flex-direction: row !important;
+        position: static !important;
+        background: none !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        gap: 0.6rem !important;
+    }
+    
+    .mobile-menu-btn {
+        display: none !important;
+    }
+}
+
+
+    
+
+/* Cinematic slideshow: replaces only the original hero background photo. */
+.hero-background {
+    isolation: isolate;
+}
+.hero-bg-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: opacity 1.6s cubic-bezier(0.22, 1, 0.36, 1), visibility 1.6s ease;
+    z-index: 0;
+    will-change: opacity;
+}
+.hero-bg-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+.hero-background .hero-bg-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    filter: brightness(0.6);
+    transform: scale(1.045);
+    transition: transform 7.2s cubic-bezier(0.2, 0.65, 0.3, 1);
+    will-change: transform;
+}
+.hero-bg-slide.active img {
+    transform: scale(1.13);
+}
+.hero-background .slider-overlay {
+    z-index: 2;
+}
+@media (max-width: 768px) {
+    .hero-background .hero-bg-slide img {
+        object-position: center center;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-bg-slide,
+    .hero-background .hero-bg-slide img {
+        transition: none !important;
+    }
+    .hero-bg-slide.active img {
+        transform: none;
+    }
+}
+
+
+        </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+        <div class="logo" style="display:flex; align-items:center; gap:0.4rem;">
+            <img src="https://lh3.googleusercontent.com/d/1gjTgytjFynd4udSKZxtSrM7FKkPcE9P1"
+                 alt="IEEE DIU SIGHT Logo"
+                 style="height:35px; width:35px; object-fit:contain;">
+            <span>IEEE DIU SB SIGHT Group</span>
+        </div>
+
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        <ul id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#focus-areas">Focus Areas</a></li>
+            <li><a href="#prizes">Prizes</a></li>
+            <li><a href="#eligibility">Eligibility & Rules</a></li>
+            <li><a href="#registration-fee">Registration Fee</a></li>
+            <li><a href="#instructions">Instructions</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#criteria">Judging</a></li>
+            <li><a href="#contact">Contact</a></li>
+            
+            <!-- Submit Idea Button in Navbar -->
+            <li style="list-style: none;">
+                <a href="https://mehedi-hasan-soft-web-support.github.io/reg/" 
+                   target="_blank" 
+                   style="background: linear-gradient(135deg, #da5b16 0%, #c8b2de 100%); 
+                          color: white; 
+                          padding: 0.5rem 1.2rem; 
+                          border-radius: 25px; 
+                          text-decoration: none; 
+                          display: inline-flex; 
+                          align-items: center; 
+                          gap: 0.4rem; 
+                          font-weight: 600; 
+                          font-size: 0.9rem;
+                          box-shadow: 0 3px 10px rgba(218, 91, 22, 0.3);
+                          transition: all 0.3s ease;">
+                    <span>📩</span> Submit Idea
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>💡 Innovate for Huminity </h1>
+            <h2>IEEE DIU SIGHT Group Idea Pitching Contest</h2>
+            <p>An initiative by DIU IEEE SIGHT Chapter to promote technology-driven solutions for social good</p>
+            <div class="cta-buttons">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxpyuwG-1xXZvAOjhu5vsXA3RXf1aC4VCeElslFavK6bjuNQ/viewform" target="_blank" class="btn btn-primary">
+                    <span>📝</span> Register Now
+                </a>
+                <!-- <a href="https://mehedi-hasan-soft-web-support.github.io/reg/" target="_blank" class="btn btn-secondary">
+                    <span>🚀</span> Submit Your Idea
+                </a>
+            </div>
+        </div> 
+    </section> -->
+    
+    <!-- <section id="home" class="hero">
+    <div class="hero-content">
+        <h1>💡 Innovate for Huminity </h1>
+        <p style="color: #eff6ff;">IEEE DIU SIGHT Group Idea Pitching Contest</p2>
+        <p>An initiative by DIU IEEE SIGHT Chapter to promote technology-driven solutions for social good</p>
+        
+    </div>
+
+    <div class="hero-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team collaboration">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80" alt="Innovation">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Social impact">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80" alt="Presentation">
+            </div>
+        </div>
+        
+        <button class="slider-arrow prev" onclick="changeSlide(-1)">❮</button>
+        <button class="slider-arrow next" onclick="changeSlide(1)">❯</button>
+        
+        <div class="slider-nav">
+            <span class="slider-dot active" onclick="currentSlide(0)"></span>
+            <span class="slider-dot" onclick="currentSlide(1)"></span>
+            <span class="slider-dot" onclick="currentSlide(2)"></span>
+            <span class="slider-dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+</section> -->
+<section id="home" class="hero">
+    <div class="hero-background" aria-label="Previous ceremony photo slideshow">
+        <div class="hero-bg-slide active"><img src="assets/ceremony/01-group-photo.jpg" alt="IEEE DIU SIGHT Group ceremony photo"></div>
+        <div class="hero-bg-slide"><img src="assets/ceremony/02-audience-and-guests.jpg" alt="Guests and audience at the ceremony"></div>
+        <div class="hero-bg-slide"><img src="assets/ceremony/03-guests-seated.jpg" alt="Guests seated during the programme"></div>
+        <div class="hero-bg-slide"><img src="assets/ceremony/04-audience-wide.jpg" alt="Audience at the event"></div>
+        <div class="hero-bg-slide"><img src="assets/ceremony/05-full-hall.jpg" alt="Full view of the ceremony hall"></div>
+        <div class="hero-bg-slide"><img src="assets/ceremony/06-opening-speaker.jpg" alt="Speaker opening the programme"></div>
+        <div class="hero-bg-slide"><img src="assets/ceremony/07-runner-up-award.jpg" alt="Runner-up prize giving moment"></div>
+        <div class="hero-bg-slide"><img src="assets/ceremony/08-guest-address.jpg" alt="Guest addressing the audience"></div>
+        <div class="hero-bg-slide"><img src="assets/ceremony/09-champion-award.jpg" alt="Champion prize giving moment"></div>
+        <div class="slider-overlay"></div>
+    </div>
+    
+    <div class="hero-content">
+        <h1>💡 Innovate for Humanity</h1>
+        <p style="color: white; font-size: 2.2rem; font-weight: 300; margin-bottom: 1rem;">IEEE DIU SB SIGHT Group Presents Idea Competition</p>
+        <p style="color: white;">An initiative by IEEE DIU SB SIGHT Group to promote technology-driven solutions for social good</p>
+        <div class="cta-buttons">
+            <!-- Registration Form Button -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeB3wWLK5Gz1rtQd9VUvyz6odVFZy148_i9doEQ3BLX2lv7yA/viewform?usp=dialog" 
+               target="_blank" 
+               class="btn btn-primary"
+               style="background: linear-gradient(135deg, #3b82f6 0%, #2670b8 100%);">
+                <span>📝</span> Register Now
+            </a>
+
+            <!-- Submission Form Button -->
+            <a href="https://mehedi-hasan-soft-web-support.github.io/reg/" 
+               target="_blank" 
+               class="btn btn-primary"
+               style="background: linear-gradient(135deg, #da5b16 0%, #c8b2de 100%); box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);">
+                <span>📩</span> Submit Idea
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <section id="about">
+        <div class="container">
+            <h2>About the Competition</h2>
+            <p class="section-subtitle">Empowering students to create meaningful change through innovation</p>
+            <div class="about-content">
+                <div class="about-card">
+                    <h3 >🤝 What is IEEE SB SIGHT Group?</h3>
+                    <p style="text-align: justify;">IEEE Special Interest Group on Humanitarian Technology (SIGHT) is a global network of IEEE volunteers dedicated to applying engineering knowledge and technological innovation to address real-world humanitarian and social challenges. SIGHT works closely with underserved communities, non-profit organizations, and local partners to co-create sustainable, ethical, and impactful solutions.
+
+The initiative focuses on improving quality of life by promoting community-driven development, empowering local stakeholders, and ensuring that technology is accessible, inclusive, and socially responsible. Through interdisciplinary collaboration, IEEE SIGHT encourages students and professionals to transform innovative ideas into practical solutions that create long-term positive change in society.</p>
+                </div>
+                <div class="about-card">
+                    <h3>💭 Why This Competition?</h3>
+                    <p style="text-align: justify;">We believe in empowering students to become innovators and changemakers who can create meaningful and lasting impact in society. This Competition is designed to provide a supportive platform where aspiring minds can explore, develop, and present technology-driven solutions to real-world social and humanitarian challenges.
+
+By encouraging creativity, critical thinking, and problem-solving, the Competition helps participants transform their ideas into actionable concepts. It also fosters collaboration, social responsibility, and innovation, inspiring students to use technology as a tool for positive change and sustainable development.</p>
+                </div>
+                <!-- <div class="about-card">
+                    <h3>Instruction </h3>
+                   <p>To inspire and support students in developing innovative solutions that leverage technology for social good, sustainable development, and positive community impact.</p>
+                
+              
+        
+                
+                </div> -->
+            </div>
+
+
+</div>
+</section>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <section id="focus-areas" class="section-alt">
+        <div class="container">
+            <h2>Focus Areas</h2>
+            <p class="section-subtitle">Projects aligned with United Nations Sustainable Development Goals (SDGs)</p>
+            
+            <div class="focus-areas-grid">
+                <div class="focus-area-card">
+                    <div class="card-header">
+                        <div class="focus-icon">⚡</div>
+                        <div class="card-title-group">
+                            <h3>Affordable and Clean Energy</h3>
+                            <span class="sdg-label">SDG 7</span>
+                        </div>
+                    </div>
+                    <p>Projects focused on renewable energy solutions such as solar, wind, or other clean energy technologies to improve energy access, especially in underserved or rural communities.</p>
+                </div>
+
+                <div class="focus-area-card">
+                    <div class="card-header">
+                        <div class="focus-icon">🏥</div>
+                        <div class="card-title-group">
+                            <h3>Health and Well-Being</h3>
+                            <span class="sdg-label">SDG 3</span>
+                        </div>
+                    </div>
+                    <p>Technology-driven solutions aimed at improving healthcare access, disease prevention, medical support systems, or overall community well-being.</p>
+                </div>
+
+                <div class="focus-area-card">
+                    <div class="card-header">
+                        <div class="focus-icon">📚</div>
+                        <div class="card-title-group">
+                            <h3>Quality Education</h3>
+                            <span class="sdg-label">SDG 4</span>
+                        </div>
+                    </div>
+                    <p>Innovative educational technologies or platforms that enhance learning opportunities, digital literacy, or access to quality education for marginalized or remote communities.</p>
+                </div>
+
+                <div class="focus-area-card">
+                    <div class="card-header">
+                        <div class="focus-icon">🌍</div>
+                        <div class="card-title-group">
+                            <h3>Climate Action and Environment</h3>
+                            <span class="sdg-label">SDG 13</span>
+                        </div>
+                    </div>
+                    <p>Projects addressing climate change mitigation, environmental sustainability, disaster resilience, or ecological conservation using technological interventions.</p>
+                </div>
+
+                <div class="focus-area-card">
+                    <div class="card-header">
+                        <div class="focus-icon">💧</div>
+                        <div class="card-title-group">
+                            <h3>Water, Sanitation, and Hygiene (WaSH)</h3>
+                            <span class="sdg-label">SDG 6</span>
+                        </div>
+                    </div>
+                    <p>Solutions focused on clean water access, sanitation systems, hygiene awareness, or water management technologies for community development.</p>
+                </div>
+            </div>
+
+            <!-- <div class="instructions-box">
+                <div class="instructions-header">
+                    <div class="instructions-icon">⚠️</div>
+                    <h3>Important Instructions</h3>
+                </div>
+                <ul class="instructions-list">
+                    <li>
+                        <span>Each proposed project must have <strong>clearly identified resource availability</strong>, ensuring feasibility and sustainability.</span>
+                    </li>
+                    <li>
+                        <span>Projects should be <strong>community-centric</strong>, where the local community directly benefits from the implementation and outcomes of the project.</span>
+                    </li>
+                    <li>
+                        <span>Preference will be given to projects that demonstrate <strong>practical impact, scalability, and alignment with local needs</strong> within the selected focus area.</span>
+                    </li>
+                    <li>
+                        <span>All projects ideas  be original and developed during the event.</span>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    
+
+     <section id="prizes" class="prizes-section">
+        <div class="container">
+            <h2>🎁 Prizes & Benefits</h2>
+            <p class="section-subtitle">Rewards and recognition for outstanding innovations</p>
+            <div class="prizes-grid">
+                 <div class="prize-card">
+                    <div class="prize-icon">🏆</div>
+                    <h3>Winner </h3>
+                    <h3>5000.00 BDT </h3>
+
+
+                   <p>Cash Prize &amp; Certificate</p>
+                </div>
+
+
+                <div class="prize-card">
+                    <div class="prize-icon">🥈</div>
+                    <h3>1<sup>st</sup> Runner-up</h3>
+                    <h3>3000.00 BDT </h3>
+                    <p>Cash Prize &amp; Certificate</p>
+                </div>
+
+
+               <div class="prize-card">
+                    <div class="prize-icon">🥉</div>
+                    <h3>2<sup>nd</sup> Runner-up</h3>
+
+                      
+                    <h3>2000.00 BDT </h3>
+                <p>Cash Prize &amp; Certificate</p>
+                </div>
+
+                <div class="prize-card">
+                    <div class="prize-icon">📜</div>
+                    <h3>All Participants</h3>
+                    <p>Participation Certificate</p>
+                </div>
+                <div class="prize-card">
+                    <div class="prize-icon">🤝</div>
+                    <h3>Mentorship</h3>
+                    <p>Guidance from IEEE professionals</p>
+                </div>
+                <div class="prize-card">
+                    <div class="prize-icon">🌐</div>
+                    <h3>Networking</h3>
+                    <p>Connect with industry experts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="eligibility" class="section-alt eligibility-section">
+        <div class="container">
+            <h2>Eligibility & Rules</h2>
+            <p class="section-subtitle">Who can participate and what are the guidelines</p>
+            <div class="eligibility-container">
+                <div class="eligibility-box">
+                    <div class="eligibility-header">
+                        <div class="eligibility-emoji">👥</div>
+                        <h3>Who Can Participate?</h3>
+                    </div>
+                    <!-- <ul>
+                        <li>Open to all DIU and other university students (undergraduate and graduate)</li>
+                        <li>Both individual participants and teams are welcome</li>
+                        <li>Team size: Maximum 4 members per team</li>
+
+
+
+
+                        
+                    </ul> -->
+
+
+
+                    <ul>
+    <li>Open to all DIU and all other university students (undergraduate and graduate)</li>
+    <li>Both individual participants and teams are welcome</li>
+    <li>Team size: Maximum 4 members per team</li>
+    <li>Each participant can register for only one team</li>
+    <li>All projects must be original and developed during the event</li>
+      
+</ul>
+
+                </div>
+
+                <div class="eligibility-box">
+                    <div class="eligibility-header">
+                        <div class="eligibility-emoji">⚖️</div>
+                        <h3>Important Rules</h3>
+                    </div>
+                    <ul>
+                     <li>All ideas must focus on humanitarian impact</li>
+
+                        <li>Plagiarism will lead to immediate disqualification</li>
+                        <li>Submission format: PDF presentation or PowerPoint (max 10 slides)</li>
+                        <li>Ideas must align with at least one of the focus areas</li>
+                        <li>Shortlisted teams will be required to pitch their ideas in person</li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+<section id="registration-fee" class="section-alt">
+        <div class="container">
+            <h2>Registration Fee</h2>
+            <p class="section-subtitle">Simple and affordable registration for all participants</p>
+            <div class="fee-container">
+                <div class="fee-card ieee-member">
+                    <div class="fee-badge">🌟 RECOMMENDED</div>
+                    <div class="fee-icon">🎓</div>
+                    <h3>IEEE Member</h3>
+                    <div class="fee-amount">FREE</div>
+                    <p class="fee-description">For registered IEEE members with valid membership</p>
+                    <ul class="fee-benefits">
+                        <li>✓ No registration fee</li>
+                        <li>✓ Full Competition access</li>
+                        <li>✓ All prizes & benefits</li>
+                        <li>✓ IEEE networking opportunities</li>
+                    </ul>
+                    
+                </div>
+                <div class="fee-card non-member">
+                    <div class="fee-icon">👨‍🎓</div>
+                    <h3>Non-IEEE Member</h3>
+                    <div class="fee-amount">৳250</div>
+                    <p class="fee-description">For non-IEEE members and general participants</p>
+                    <ul class="fee-benefits">
+                        <li>✓ One-time registration fee</li>
+                        <li>✓ Full Competition access</li>
+                        <li>✓ All prizes & benefits</li>
+                        <li>✓ Participation certificate</li>
+                    </ul>
+                    <p style="position: center;">Or</p>
+                    <a href="https://www.ieee.org/membership/join/index.html" target="_blank" class="join-ieee-btn">
+                        🌟 Join IEEE Today
+                    </a>
+                    <p class="join-note">Not an IEEE member? Join now and participate for FREE!</p>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </section>
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<section id="instructions" class="section-alt">
+        <div class="container">
+            
+
+
+             
+
+            <h2>Submission Instructions</h2>
+            <p class="section-subtitle">Follow these simple steps to submit your innovative idea</p>
+            
+            <div class="instructions-container">
+                <div class="instruction-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>📝 Complete Online Registration</h3>
+                        <p>Fill out the registration form with your team or individual details. You'll receive a confirmation email with further instructions and submission guidelines.</p>
+                    </div>
+                </div>
+
+                <div class="instruction-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>📊 Prepare Your Submission</h3>
+                        <p>Create ONE of the following formats to present your idea:</p>
+                        <div class="submission-options">
+                            <div class="option-card">
+                                <div class="option-icon">📽️</div>
+                                <h4>Presentation Slides</h4>
+                                <p>8-12 slides (PDF or PowerPoint)</p>
+                            </div>
+                            <div class="option-divider">OR</div>
+                            <div class="option-card">
+                                <div class="option-icon">🎨</div>
+                                <h4>Infographic Poster</h4>
+                                <p>Single page visual presentation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instruction-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>🎥 Record Your Pitch Video</h3>
+                        <p>Create a <strong>3-minute video</strong> presenting your slides or poster. No need for high production quality - a simple voice-over explaining your idea will work perfectly!</p>
+                        <div class="video-tips">
+                            <div class="tip-item">✓ Keep it clear and concise</div>
+                            <div class="tip-item">✓ Speak confidently about your solution</div>
+                            <div class="tip-item">✓ Highlight the social impact</div>
+                            <div class="tip-item">✓ Stay within 3 minutes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instruction-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>☁️ Upload & Submit</h3>
+                        <p>Upload both your slides/poster and the recorded video to a Google Drive folder. Share the folder link with us using the submission form (provided after registration).</p>
+                        <div class="upload-checklist">
+                            <div class="checklist-item">📄 Presentation slides or poster</div>
+                            <div class="checklist-item">🎬 3-minute pitch video</div>
+                            <div class="checklist-item">🔗 Public sharing link enabled</div>
+                            <div class="checklist-item">✅ Submission form completed</div>
+                        </div>
+                    </div>
+                </div>
+        
+
+            <div class="important-note">
+                <div class="note-icon">⚠️</div>
+                 
+                <div class="note-content">
+                    <h4>Important Reminders</h4>
+                    
+                    <ul>
+                        <li>Ensure your Google Drive link has proper sharing permissions (anyone with the link can view)</li>
+                        <li>File names should clearly identify your team and submission</li>
+                        <li>Submit before the deadline: <strong>January 31, 2026</strong></li>
+                        <li>Keep a backup of all your files</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2>Timeline & Important Dates</h2>
+            <p class="section-subtitle">Follow our journey from registration to winner announcement</p>
+            <div class="timeline-tree">
+                <div class="timeline-item">
+                    <div class="timeline-dot">🚀</div>
+                    <div class="timeline-content">
+                        <h3>📅 Registration </h3>
+                        <div class="timeline-date">Open: January 10, 2026</div>
+                        
+                        <p>Start your journey by registering your team or individual participation. The doors are now open for all aspiring innovators!</p>
+                   <div class="timeline-date">Close: January 28, 2026</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot">📝</div>
+                    <div class="timeline-content">
+                        <h3>📝 Idea Submission Deadline</h3>
+                        <div class="timeline-date">January 31, 2026</div>
+                        <p>Submit your complete idea proposal with all required details. Make sure to showcase your creativity and innovation!</p>
+                    </div>
+                </div>
+                
+   <div class="timeline-item">
+                    <div class="timeline-dot">📝</div>
+                    <div class="timeline-content">
+                         <h3>Result Announcement &amp; Award Ceremony </h3>
+                        <div class="timeline-date"><b>(To be anounced)</b></div>
+                        <p>Winners will be announced and awarded. Celebrate your achievements with us!</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="criteria">
+        <div class="container">
+            <h2>Judging Criteria</h2>
+            <p class="section-subtitle">How we evaluate your innovative ideas</p>
+            <div class="criteria-grid">
+                <div class="criteria-item">
+                    <div class="criteria-icon">💡</div>
+                    <h3>Innovation & Creativity</h3>
+                    <p>Originality and uniqueness of the idea</p>
+                </div>
+                <div class="criteria-item">
+                    <div class="criteria-icon">🌍</div>
+                    <h3>Social Impact & Feasibility</h3>
+                    <p>Potential to create positive change </p>
+                </div>
+                
+                <div class="criteria-item">
+                    <div class="criteria-icon">🔬</div>
+                    <h3>Technical Approach</h3>
+                    <p>Soundness of technical methodology</p>
+                </div>
+                <div class="criteria-item">
+                    <div class="criteria-icon">🎯</div>
+                    <h3>Presentation Quality</h3>
+                    <p>Clarity and effectiveness of pitch</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+
+
+
+
+
+
+
+
+    <section id="contact">
+        <div class="container">
+         <h2>📞 Contact & FAQ</h2>
+            <p class="section-subtitle">Get in touch with us or find answers to common questions</p>
+            <div class="contact-info">
+                <div class="contact-card">
+    <div class="contact-icon">📧</div>
+    <h3>Email</h3>
+    <p>
+        <a href="mailto:ieeediusbsight@gmail.com" style="text-decoration: none; color: inherit;">
+            ieeediusbsight@gmail.com
+        </a>
+    </p>
+</div>
+
+               <div class="contact-card">
+    <div class="contact-icon">📱</div>
+    <h3>Phone</h3>
+    <p>
+        <a href="tel:+8801701801788" style="text-decoration: none; color: inherit;">
+            +880 170-1801788
+        </a><br>
+        <a href="tel:+8801701801788" style="text-decoration: none; color: inherit;">
+             +880 179-7642473
+        </a>
+    </p>
+</div>
+
+
+
+
+
+              <div class="contact-card">
+    <div class="contact-icon">💬</div>
+    <h3>Facebook</h3>
+    <p>
+        <a href="https://www.facebook.com/profile.php?id=61582082533297" 
+           target="_blank" 
+           style="text-decoration: none; color: inherit;">
+            IEEE DIU SB SIGHT Group
+        </a>
+    </p>
+</div>
+
+            </div>
+   <!-- 
+            <h3 style="text-align: center; margin-top: 4rem; font-size: 2rem; color: #1a4a7a;">❓ Frequently Asked Questions</h3>
+            <div class="faq-container">
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        Can first-year students participate?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! The Contest is open to all DIU students regardless of their year of study. We encourage first-year students to participate and showcase their innovative ideas.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        Is there any registration fee?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        No, the Contest is completely free to participate. There are no registration or submission fees.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        Can one person submit multiple ideas?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        No, each participant or team can submit only one idea. However, you can refine and improve your submission before the deadline.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        Do we need a working prototype?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        No, a working prototype is not mandatory. You need to submit a well-thought-out idea with clear problem statement, proposed solution, and expected impact. However, having a prototype or proof of concept will strengthen your submission.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        Can team members be from different departments?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! Cross-departmental teams are encouraged as they bring diverse perspectives and skills to solve complex problems.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    
+<footer>
+    <div class="container">
+        <div class="footer-logos">
+           <div class="footer-logo-item">
+        <a href="https://www.facebook.com/profile.php?id=61582082533297">       <img src="https://lh3.googleusercontent.com/d/1gjTgytjFynd4udSKZxtSrM7FKkPcE9P1" alt="IEEE DIU SB SIGHT Group"> </a>
+                <p>IEEE DIU SB SIGHT Group</p>
+            </div>
+            <div class="footer-logo-item">
+            <a href="https://daffodilvarsity.edu.bd/">          <img src="https://lh3.googleusercontent.com/d/1FEYg9X-GgktSL0xKevOIWQvhPTlwNSMM" alt="Daffodil International University"> </a>
+                <p>Daffodil International University</p>
+            </div>
+            <div class="footer-logo-item">
+         <a href="https://www.facebook.com/diuieee/">         <img src="https://lh3.googleusercontent.com/d/181BJcGV2dxrkaVoZRRQCI9yuateewxH5" alt="IEEE DIU Student Branch"> </a>
+                <p>IEEE DIU Student Branch</p>
+            </div>
+            
+        </div>
+        <div class="footer-divider"></div>
+        <p style="font-size: 1.2rem; font-weight: bold; margin-top: 2rem;">&copy; 2026 DIU IEEE SB SIGHT Group. All rights reserved.</p>
+        <p style="margin-top: 1rem; opacity: 0.8;">Building a better tomorrow through technology and innovation 🚀</p>
+        
+        
+           <div style="display: flex; justify-content: center; align-items: center; gap: 0.8rem; flex-wrap: wrap;">
+    <span style="opacity: 0.9; font-size: 1rem;">
+        Developed by <strong style="color: #3b82f6;">Md. Mehedi Hasan</strong>
+    </span>
+
+    <a href="https://www.facebook.com/MehediHasanbd2020" target="_blank"
+       style="color: white; text-decoration: none; display: flex; align-items: center; gap: 0.3rem; 
+              background: rgba(96, 165, 250, 0.2); padding: 0.35rem 0.8rem; border-radius: 20px;">
+        Fb
+    </a>
+
+    <a href="https://sites.google.com/view/mehedihasan497/home" target="_blank"
+       style="color: white; text-decoration: none; display: flex; align-items: center; gap: 0.3rem; 
+              background: rgba(96, 165, 250, 0.2); padding: 0.35rem 0.8rem; border-radius: 20px;">
+        Portfollio 
+    </a>
+</div>
+
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+'use strict';
+
+// ============================================
+// NAVIGATION MODULE - Enhanced Mobile Menu Management
+// ============================================
+const NavigationModule = (function() {
+    let isMenuOpen = false;
+
+    function toggleMobileMenu() {
+        const menu = document.getElementById('navMenu');
+        const body = document.body;
+        
+        if (menu) {
+            isMenuOpen = !isMenuOpen;
+            menu.classList.toggle('active');
+            
+            if (isMenuOpen) {
+                body.classList.add('menu-open');
+            } else {
+                body.classList.remove('menu-open');
+            }
+        }
+    }
+
+    function closeMobileMenu() {
+        const menu = document.getElementById('navMenu');
+        const body = document.body;
+        
+        if (menu && menu.classList.contains('active')) {
+            menu.classList.remove('active');
+            body.classList.remove('menu-open');
+            isMenuOpen = false;
+        }
+    }
+    
+    function setupSmoothScroll() {
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        
+        navLinks.forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                if (href && href.startsWith('#') && href.length > 1) {
+                    e.preventDefault();
+                    
+                    const targetId = href.substring(1);
+                    const target = document.getElementById(targetId);
+                    
+                    if (target) {
+                        closeMobileMenu();
+                        
+                        const nav = document.querySelector('nav');
+                        const navHeight = nav ? nav.offsetHeight : 70;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        if (history.pushState) {
+                            history.pushState(null, null, href);
+                        }
+                    }
+                }
+            });
+        });
+    }
+
+    function handleClickOutside(event) {
+        const menu = document.getElementById('navMenu');
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        
+        if (isMenuOpen && menu && menuBtn) {
+            if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
+                closeMobileMenu();
+            }
+        }
+    }
+
+    function handleEscapeKey(event) {
+        if (event.key === 'Escape' && isMenuOpen) {
+            closeMobileMenu();
+        }
+    }
+    
+    function init() {
+        setupSmoothScroll();
+        document.addEventListener('click', handleClickOutside);
+        document.addEventListener('keydown', handleEscapeKey);
+        
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && isMenuOpen) {
+                closeMobileMenu();
+            }
+        });
+    }
+    
+    return {
+        init: init,
+        toggleMenu: toggleMobileMenu,
+        closeMenu: closeMobileMenu
+    };
+})();
+
+function toggleMenu() {
+    NavigationModule.toggleMenu();
+}
+
+// ============================================
+// FAQ MODULE
+// ============================================
+const FAQModule = (function() {
+    function toggleFAQItem(element) {
+        if (!element) return;
+        
+        const isActive = element.classList.contains('active');
+        const allItems = document.querySelectorAll('.faq-item');
+        
+        allItems.forEach(item => {
+            if (item !== element) {
+                item.classList.remove('active');
+            }
+        });
+        
+        if (isActive) {
+            element.classList.remove('active');
+        } else {
+            element.classList.add('active');
+        }
+    }
+    
+    function init() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const newItem = item.cloneNode(true);
+            item.parentNode.replaceChild(newItem, item);
+            
+            newItem.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleFAQItem(this);
+            });
+        });
+    }
+    
+    return {
+        init: init,
+        toggle: toggleFAQItem
+    };
+})();
+
+function toggleFAQ(element) {
+    FAQModule.toggle(element);
+}
+
+// ============================================
+// ANIMATION MODULE - MOBILE OPTIMIZED
+// ============================================
+const AnimationModule = (function() {
+    function setupScrollAnimations() {
+        // Mobile detection
+        const isMobile = window.innerWidth <= 768;
+        
+        if (isMobile) {
+            // Mobile এ সব sections instantly visible
+            console.log('📱 Mobile detected - Animations disabled');
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.opacity = '1';
+                section.style.transform = 'translateY(0)';
+                section.style.transition = 'none';
+            });
+            return;
+        }
+
+        // Desktop এর জন্য animations
+        console.log('💻 Desktop detected - Animations enabled');
+        
+        if (!('IntersectionObserver' in window)) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.opacity = '1';
+                section.style.transform = 'translateY(0)';
+            });
+            return;
+        }
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, 100);
+                }
+            });
+        }, observerOptions);
+        
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            
+            observer.observe(section);
+        });
+    }
+    
+    function init() {
+        setupScrollAnimations();
+        
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                setupScrollAnimations();
+            }, 250);
+        });
+    }
+    
+    return {
+        init: init
+    };
+})();
+
+// ============================================
+// SCROLL MODULE
+// ============================================
+const ScrollModule = (function() {
+    function handleScrollToHash() {
+        if (window.location.hash) {
+            setTimeout(() => {
+                const target = document.querySelector(window.location.hash);
+                if (target) {
+                    const nav = document.querySelector('nav');
+                    const navHeight = nav ? nav.offsetHeight : 70;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 100);
+        }
+    }
+
+    function init() {
+        handleScrollToHash();
+    }
+
+    return {
+        init: init
+    };
+})();
+
+// ============================================
+// VIEWPORT MODULE
+// ============================================
+const ViewportModule = (function() {
+    function setViewportHeight() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    
+    function init() {
+        setViewportHeight();
+        window.addEventListener('resize', setViewportHeight);
+        window.addEventListener('orientationchange', function() {
+            setTimeout(setViewportHeight, 100);
+        });
+    }
+    
+    return {
+        init: init
+    };
+})();
+
+// ============================================
+// PERFORMANCE MODULE
+// ============================================
+const PerformanceModule = (function() {
+    function setupLazyLoading() {
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                        }
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            const images = document.querySelectorAll('img[data-src]');
+            images.forEach(img => imageObserver.observe(img));
+        }
+    }
+    
+    function init() {
+        setupLazyLoading();
+    }
+    
+    return {
+        init: init
+    };
+})();
+
+// ============================================
+// SLIDER MODULE
+// ============================================
+const SliderModule = (function() {
+    let currentSlide = 0;
+    let slides = [];
+    let dots = [];
+    let autoSlideInterval;
+    
+    function showSlide(n) {
+        slides = document.querySelectorAll('.slide');
+        dots = document.querySelectorAll('.slider-dot');
+        
+        if (!slides.length) return;
+        
+        if (n >= slides.length) currentSlide = 0;
+        if (n < 0) currentSlide = slides.length - 1;
+        
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        if (slides[currentSlide]) {
+            slides[currentSlide].classList.add('active');
+        }
+        
+        if (dots[currentSlide]) {
+            dots[currentSlide].classList.add('active');
+        }
+    }
+    
+    function nextSlide() {
+        currentSlide++;
+        showSlide(currentSlide);
+    }
+    
+    function prevSlide() {
+        currentSlide--;
+        showSlide(currentSlide);
+    }
+    
+    function goToSlide(n) {
+        currentSlide = n;
+        showSlide(currentSlide);
+    }
+    
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 5000);
+    }
+    
+    function stopAutoSlide() {
+        if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+        }
+    }
+    
+    function init() {
+        slides = document.querySelectorAll('.slide');
+        dots = document.querySelectorAll('.slider-dot');
+        
+        if (slides.length > 0) {
+            showSlide(currentSlide);
+            startAutoSlide();
+            
+            const sliderContainer = document.querySelector('.slider-container');
+            if (sliderContainer) {
+                sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+                sliderContainer.addEventListener('mouseleave', startAutoSlide);
+            }
+        }
+    }
+    
+    return {
+        init: init,
+        next: nextSlide,
+        prev: prevSlide,
+        goTo: goToSlide
+    };
+})();
+
+function changeSlide(n) {
+    if (n > 0) {
+        SliderModule.next();
+    } else {
+        SliderModule.prev();
+    }
+}
+
+function currentSlide(n) {
+    SliderModule.goTo(n);
+}
+
+// ============================================
+// MAIN INITIALIZATION
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 Initializing website modules...');
+    
+    try {
+        ViewportModule.init();
+        console.log('✅ Viewport module initialized');
+        
+        NavigationModule.init();
+        console.log('✅ Navigation module initialized');
+        
+        FAQModule.init();
+        console.log('✅ FAQ module initialized');
+        
+        AnimationModule.init();
+        console.log('✅ Animation module initialized');
+        
+        ScrollModule.init();
+        console.log('✅ Scroll module initialized');
+        
+        PerformanceModule.init();
+        console.log('✅ Performance module initialized');
+        
+        SliderModule.init();
+        console.log('✅ Slider module initialized');
+        
+        console.log('✅ All modules initialized successfully');
+    } catch (error) {
+        console.error('❌ Error initializing modules:', error);
+    }
+});
+
+window.addEventListener('load', function() {
+    document.documentElement.style.scrollBehavior = 'smooth';
+    console.log('✅ Page fully loaded');
+});
+
+document.addEventListener('click', function(e) {
+    const target = e.target.closest('a[href^="#"]');
+    if (target && target.getAttribute('href') !== '#') {
+        const href = target.getAttribute('href');
+        const targetElement = document.querySelector(href);
+        
+        if (targetElement) {
+            e.preventDefault();
+        }
+    }
+}, true);
+
+window.addEventListener('popstate', function() {
+    if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+            const nav = document.querySelector('nav');
+            const navHeight = nav ? nav.offsetHeight : 70;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    }
+});
+
+
+// Hero background photo slideshow (background only; all original hero content stays unchanged).
+(function initHeroBackgroundSlideshow() {
+    function startSlideshow() {
+        const slides = Array.from(document.querySelectorAll('.hero-bg-slide'));
+        if (slides.length < 2) return;
+
+        const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reducedMotion) return;
+
+        let activeIndex = 0;
+        let intervalId = null;
+        const interval = 6800;
+
+        function showNext() {
+            slides[activeIndex].classList.remove('active');
+            activeIndex = (activeIndex + 1) % slides.length;
+            slides[activeIndex].classList.add('active');
+        }
+
+        function start() {
+            if (!intervalId && !document.hidden) {
+                intervalId = window.setInterval(showNext, interval);
+            }
+        }
+
+        function stop() {
+            if (intervalId) {
+                window.clearInterval(intervalId);
+                intervalId = null;
+            }
+        }
+
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) stop();
+            else start();
+        });
+
+        start();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', startSlideshow, { once: true });
+    } else {
+        startSlideshow();
+    }
+})();
+
+</script>
+</body>
+</html>
