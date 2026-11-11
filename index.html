@@ -1,4 +1,4 @@
-
+﻿
 
 
 
@@ -222,8 +222,6 @@ nav a:hover::after {
 
         .hero h1 {
             font-size: 3.5rem;
-            font-family: 'Playfair Display', Georgia, serif;
-            letter-spacing: -0.02em;
             margin-bottom: 1rem;
             animation: fadeInUp 1s;
             text-shadow: 0 2px 20px rgba(0,0,0,0.3), 0 0 60px rgba(59,130,246,0.15);
@@ -231,8 +229,6 @@ nav a:hover::after {
 
         .hero h2 {
             font-size: 2.2rem;
-            font-family: 'Playfair Display', Georgia, serif;
-            letter-spacing: -0.01em;
             margin-bottom: 1rem;
             animation: fadeInUp 1.2s;
             font-weight: 300;
@@ -268,8 +264,6 @@ nav a:hover::after {
             align-items: center;
             gap: 0.5rem;
             font-weight: 600;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
             font-size: 0.95rem;
         }
 
@@ -305,8 +299,6 @@ nav a:hover::after {
 
         section h2 {
             font-size: 3rem;
-            font-family: 'Playfair Display', Georgia, serif;
-            letter-spacing: -0.02em;
             font-weight: 700;
             margin-bottom: 1rem;
             text-align: center;
@@ -440,7 +432,7 @@ nav a:hover::after {
         .focus-icon {
             font-size: 4rem;
             margin-bottom: 1rem;
-            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s ease;
             position: relative;
             z-index: 1;
         }
@@ -539,7 +531,7 @@ nav a:hover::after {
 
         .eligibility-emoji {
             font-size: 4rem;
-            animation: bounce 2s ease-in-out infinite;
+            transition: transform 0.3s ease;
         }
 
         .eligibility-box h3 {
@@ -647,8 +639,7 @@ nav a:hover::after {
             text-align: right;
         }
 
-        border: 1px solid rgba(255,255,255,0.6);
-            backdrop-filter: blur(10px);
+        
             .timeline-content {
             padding: 2rem;
             background: rgba(255,255,255,0.9);
@@ -658,25 +649,35 @@ nav a:hover::after {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        /* Branch lines */
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: 30px;
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(90deg, #3b82f6, #2670b8);
-        }
+        
 
-        .timeline-item:nth-child(odd) .timeline-content::before {
-            left: -50px;
+        
+        /* Icon / Emoji Hover Animations */
+        .focus-item:hover .focus-icon, .focus-icon:hover {
+            animation: float 2s ease-in-out infinite;
         }
-
-        .timeline-item:nth-child(even) .timeline-content::before {
-            right: -50px;
+        .criteria-item:hover .criteria-icon, .criteria-icon:hover {
+            animation: float 2s ease-in-out infinite;
         }
-
-        .timeline-content:hover {
+        .contact-card:hover .contact-icon, .contact-icon:hover {
+            animation: float 2s ease-in-out infinite;
+        }
+        .prize-card:hover .prize-icon, .prize-icon:hover {
+            animation: bounce 1.5s ease-in-out infinite;
+        }
+        .fee-card:hover .fee-icon, .fee-icon:hover {
+            animation: bounce 1.5s ease-in-out infinite;
+        }
+        .eligibility-box:hover .eligibility-emoji, .eligibility-emoji:hover {
+            animation: bounce 1.5s ease-in-out infinite;
+        }
+        .timeline-item:hover .timeline-dot, .timeline-dot:hover {
+            animation: dotPulse 1.5s ease-in-out infinite;
+        }
+        .instruction-step:hover .step-number, .step-number:hover {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+.timeline-content:hover {
             transform: scale(1.05);
             box-shadow: 0 20px 40px rgba(59, 130, 246, 0.25);
         }
@@ -698,7 +699,7 @@ nav a:hover::after {
             justify-content: center;
             font-size: 1.5rem;
             z-index: 2;
-            animation: dotPulse 2s ease-in-out infinite;
+            transition: transform 0.3s ease;
         }
 
         @keyframes dotPulse {
@@ -787,7 +788,7 @@ nav a:hover::after {
         .criteria-icon {
             font-size: 4rem;
             margin-bottom: 1rem;
-            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s ease;
             position: relative;
             z-index: 1;
         }
@@ -855,7 +856,7 @@ nav a:hover::after {
         .prize-icon {
             font-size: 4rem;
             margin-bottom: 1rem;
-            animation: bounce 2s ease-in-out infinite;
+            transition: transform 0.3s ease;
         }
 
         .prize-card h3 {
@@ -899,7 +900,7 @@ nav a:hover::after {
         .contact-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
-            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s ease;
         }
 
         .contact-card h3 {
@@ -1176,10 +1177,7 @@ footer p {
                 left: 30px;
             }
 
-            .timeline-content::before {
-                left: -50px !important;
-                right: auto !important;
-            }
+            
         }
 
         /* Instructions Section - Enhanced */
@@ -1230,7 +1228,7 @@ footer p {
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
     position: relative;
     z-index: 2;
-    animation: pulse 2s ease-in-out infinite;
+    transition: transform 0.3s ease;
 }
 
 .step-content {
@@ -1590,7 +1588,7 @@ footer p {
 .fee-icon {
     font-size: 3rem;
     margin-bottom: 0.8rem;
-    animation: bounce 2s ease-in-out infinite;
+    transition: transform 0.3s ease;
 }
 
 .fee-card h3 {
@@ -1661,7 +1659,7 @@ footer p {
 
 .note-icon-inline {
     font-size: 1.3rem;
-    animation: pulse 2s ease-in-out infinite;
+    transition: transform 0.3s ease;
 }
 
 .fee-note-list {
@@ -1774,8 +1772,6 @@ padding-top: 40px;
 }
 .hero h1 {
     font-size: 3.5rem;
-            font-family: 'Playfair Display', Georgia, serif;
-            letter-spacing: -0.02em;
     margin-bottom: 1rem;
     animation: fadeInUp 1s;
     text-shadow: 0 2px 20px rgba(0,0,0,0.3), 0 0 60px rgba(59,130,246,0.15);
@@ -1783,8 +1779,6 @@ padding-top: 40px;
 
 .hero h2 {
     font-size: 2.2rem;
-            font-family: 'Playfair Display', Georgia, serif;
-            letter-spacing: -0.01em;
     margin-bottom: 1rem;
     animation: fadeInUp 1.2s;
     font-weight: 300;
@@ -2051,7 +2045,7 @@ padding-top: 40px;
 
 .focus-icon {
     font-size: 3rem;
-    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
     position: relative;
     z-index: 1;
 }
@@ -2433,14 +2427,14 @@ footer a {
 
     <!-- <section id="home" class="hero">
         <div class="hero-content">
-            <h1>💡 Innovate for Huminity </h1>
+            <h1 style="text-align: center;">Innovate for Humanity</h1>
             <h2>IEEE DIU SIGHT Group Idea Pitching Contest</h2>
             <p>An initiative by DIU IEEE SIGHT Chapter to promote technology-driven solutions for social good</p>
             <div class="cta-buttons">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxpyuwG-1xXZvAOjhu5vsXA3RXf1aC4VCeElslFavK6bjuNQ/viewform" target="_blank" class="btn btn-primary">
                     <span>📝</span> Register Now
                 </a>
-                <!-- <a href="https://mehedi-hasan-soft-web-support.github.io/reg/" target="_blank" class="btn btn-secondary">
+                <!-- <a href="reg/" target="_blank" class="btn btn-secondary">
                     <span>🚀</span> Submit Your Idea
                 </a>
             </div>
@@ -2449,7 +2443,7 @@ footer a {
     
     <!-- <section id="home" class="hero">
     <div class="hero-content">
-        <h1>💡 Innovate for Huminity </h1>
+        <h1 style="text-align: center;">Innovate for Humanity</h1>
         <p style="color: #eff6ff;">IEEE DIU SIGHT Group Idea Pitching Contest</p2>
         <p>An initiative by DIU IEEE SIGHT Chapter to promote technology-driven solutions for social good</p>
         
@@ -2497,7 +2491,7 @@ footer a {
     </div>
     
     <div class="hero-content">
-        <h1>💡 Innovate for Humanity</h1>
+        <h1 style="text-align: center;">Innovate for Humanity</h1>
         <p style="color: white; font-size: 2.2rem; font-weight: 300; margin-bottom: 1rem;">IEEE DIU SB SIGHT Group Presents Idea Competition</p>
         <p style="color: white;">An initiative by IEEE DIU SB SIGHT Group to promote technology-driven solutions for social good</p>
         <div class="cta-buttons">
@@ -3416,41 +3410,22 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
         <p style="margin-top: 1rem; opacity: 0.8;">Building a better tomorrow through technology and innovation 🚀</p>
         
         
-           <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.5rem;">
-    <span style="opacity: 0.85; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px;">
+           <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.4rem; margin-top: 1.5rem; font-family: inherit;">
+    <span style="opacity: 0.85; font-size: 0.95rem;">
         Developed by
     </span>
-    <span style="font-size: 1.15rem; font-weight: 700; color: #60a5fa;">
+    <a href="https://sites.google.com/view/mehedihasan497/home" target="_blank" 
+       style="opacity: 0.85; font-size: 0.95rem; color: white; text-decoration: none; font-weight: normal; transition: opacity 0.3s, color 0.3s;"
+       onmouseover="this.style.opacity='1'; this.style.color='#93c5fd';" 
+       onmouseout="this.style.opacity='0.85'; this.style.color='white';">
         Md. Mehedi Hasan
-    </span>
-    <span style="font-size: 1.15rem; font-weight: 700; color: #93c5fd;">
+    </a>
+    <a href="https://ea-arnob-07.github.io/Arnob-Portfolio/" target="_blank" 
+       style="opacity: 0.85; font-size: 0.95rem; color: white; text-decoration: none; font-weight: normal; transition: opacity 0.3s, color 0.3s;"
+       onmouseover="this.style.opacity='1'; this.style.color='#93c5fd';" 
+       onmouseout="this.style.opacity='0.85'; this.style.color='white';">
         Estiuk Arafat Arnob
-    </span>
-
-    <div style="display: flex; justify-content: center; align-items: center; gap: 0.8rem; margin-top: 0.4rem; flex-wrap: wrap;">
-        <!-- Facebook Link -->
-        <a href="https://www.facebook.com" target="_blank" title="Facebook"
-           style="color: white; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; 
-                  background: rgba(96, 165, 250, 0.2); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.9rem;
-                  border: 1px solid rgba(96, 165, 250, 0.3); transition: all 0.3s ease;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-            <span>Facebook</span>
-        </a>
-
-        <!-- Portfolio Link -->
-        <a href="https://github.com/ea-arnob-07" target="_blank" title="Portfolio"
-           style="color: white; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; 
-                  background: rgba(96, 165, 250, 0.2); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.9rem;
-                  border: 1px solid rgba(96, 165, 250, 0.3); transition: all 0.3s ease;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-            </svg>
-            <span>Portfolio</span>
-        </a>
-    </div>
+    </a>
 </div>
 
         </div>
