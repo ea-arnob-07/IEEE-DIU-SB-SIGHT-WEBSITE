@@ -1,4 +1,4 @@
-﻿
+
 
 
 
@@ -115,9 +115,9 @@ nav a:hover::after {
     cursor: pointer;
 }
 
-/* Responsive *//* Mobile à¦ à¦¸à¦¬ transition speed à¦•à¦®à¦¾à¦¨à§‹ */
+/* Responsive *//* Mobile এ সব transition speed কমানো */
 @media (max-width: 768px) {
-    /* à¦¸à¦¬ element à¦à¦° à¦œà¦¨à§à¦¯ transition time à¦•à¦®à¦¾à¦¨à§‹ */
+    /* সব element এর জন্য transition time কমানো */
     *,
     *::before,
     *::after {
@@ -125,7 +125,7 @@ nav a:hover::after {
         animation-duration: 0.3s !important;
     }
     
-    /* Navigation à¦à¦° à¦œà¦¨à§à¦¯ à¦à¦•à¦Ÿà§ à¦¬à§‡à¦¶à¦¿ à¦°à¦¾à¦–à¦¾ */
+    /* Navigation এর জন্য একটু বেশি রাখা */
 
 
     
@@ -135,7 +135,7 @@ nav a:hover::after {
         transition-duration: 0.2s !important;
     }
     
-    /* Animation disable à¦•à¦°à¦¤à§‡ à¦šà¦¾à¦‡à¦²à§‡ */
+    /* Animation disable করতে চাইলে */
     .about-card,
     .focus-item,
     .eligibility-box,
@@ -460,7 +460,7 @@ nav a:hover::after {
         }
 
         .eligibility-section::before {
-            content: 'ðŸŒ¿';
+            content: '🌿';
             position: absolute;
             font-size: 15rem;
             opacity: 0.04;
@@ -584,7 +584,7 @@ nav a:hover::after {
         }
 
         .eligibility-box li::before {
-            content: 'âœ“';
+            content: '✓';
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -991,10 +991,10 @@ footer p {
 }
 .footer-logos {
     display: flex;
-    justify-content: center;   /* âœ”ï¸ center */
+    justify-content: center;   /* ✔️ center */
     align-items: center;
-    gap: 2rem;                 /* âœ”ï¸ controlled spacing */
-    flex-wrap: wrap;           /* âœ”ï¸ mobile responsive */
+    gap: 2rem;                 /* ✔️ controlled spacing */
+    flex-wrap: wrap;           /* ✔️ mobile responsive */
 }
 
 .footer-logo-item {
@@ -1002,7 +1002,7 @@ footer p {
 }
 
 .footer-logo-item img {
-    height: 60px;              /* âœ”ï¸ same size logos */
+    height: 60px;              /* ✔️ same size logos */
     max-width: 100%;
     object-fit: contain;
 }
@@ -1440,7 +1440,7 @@ footer p {
 }
 
 .note-content li::before {
-    content: 'âš ';
+    content: '⚠';
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2145,7 +2145,7 @@ padding-top: 40px;
 }
 
 .instructions-list li::before {
-    content: 'âœ“';
+    content: '✓';
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2395,7 +2395,7 @@ footer a {
             <span>IEEE DIU SB SIGHT Group</span>
         </div>
 
-        <button class="mobile-menu-btn" onclick="toggleMenu()">â˜°</button>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
         <ul id="navMenu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -2424,7 +2424,7 @@ footer a {
                           font-size: 0.9rem;
                           box-shadow: 0 3px 10px rgba(218, 91, 22, 0.3);
                           transition: all 0.3s ease;">
-                    <span>ðŸ“©</span> Submit Idea
+                    <span>📩</span> Submit Idea
                 </a>
             </li>
         </ul>
@@ -2433,15 +2433,15 @@ footer a {
 
     <!-- <section id="home" class="hero">
         <div class="hero-content">
-            <h1>ðŸ’¡ Innovate for Huminity </h1>
+            <h1>💡 Innovate for Huminity </h1>
             <h2>IEEE DIU SIGHT Group Idea Pitching Contest</h2>
             <p>An initiative by DIU IEEE SIGHT Chapter to promote technology-driven solutions for social good</p>
             <div class="cta-buttons">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxpyuwG-1xXZvAOjhu5vsXA3RXf1aC4VCeElslFavK6bjuNQ/viewform" target="_blank" class="btn btn-primary">
-                    <span>ðŸ“</span> Register Now
+                    <span>📝</span> Register Now
                 </a>
-                <!-- <a href="reg/" target="_blank" class="btn btn-secondary">
-                    <span>ðŸš€</span> Submit Your Idea
+                <!-- <a href="https://mehedi-hasan-soft-web-support.github.io/reg/" target="_blank" class="btn btn-secondary">
+                    <span>🚀</span> Submit Your Idea
                 </a>
             </div>
         </div> 
@@ -2449,7 +2449,7 @@ footer a {
     
     <!-- <section id="home" class="hero">
     <div class="hero-content">
-        <h1>ðŸ’¡ Innovate for Huminity </h1>
+        <h1>💡 Innovate for Huminity </h1>
         <p style="color: #eff6ff;">IEEE DIU SIGHT Group Idea Pitching Contest</p2>
         <p>An initiative by DIU IEEE SIGHT Chapter to promote technology-driven solutions for social good</p>
         
@@ -2471,8 +2471,8 @@ footer a {
             </div>
         </div>
         
-        <button class="slider-arrow prev" onclick="changeSlide(-1)">â®</button>
-        <button class="slider-arrow next" onclick="changeSlide(1)">â¯</button>
+        <button class="slider-arrow prev" onclick="changeSlide(-1)">❮</button>
+        <button class="slider-arrow next" onclick="changeSlide(1)">❯</button>
         
         <div class="slider-nav">
             <span class="slider-dot active" onclick="currentSlide(0)"></span>
@@ -2497,16 +2497,16 @@ footer a {
     </div>
     
     <div class="hero-content">
-        <h1>ðŸ’¡ Innovate for Humanity</h1>
+        <h1>💡 Innovate for Humanity</h1>
         <p style="color: white; font-size: 2.2rem; font-weight: 300; margin-bottom: 1rem;">IEEE DIU SB SIGHT Group Presents Idea Competition</p>
         <p style="color: white;">An initiative by IEEE DIU SB SIGHT Group to promote technology-driven solutions for social good</p>
         <div class="cta-buttons">
             <!-- Registration Form Button -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeB3wWLK5Gz1rtQd9VUvyz6odVFZy148_i9doEQ3BLX2lv7yA/viewform?usp=dialog" 
+            <a href="registration/" 
                target="_blank" 
                class="btn btn-primary"
                style="background: linear-gradient(135deg, #3b82f6 0%, #2670b8 100%);">
-                <span>ðŸ“</span> Register Now
+                <span>📝</span> Register Now
             </a>
 
             <!-- Submission Form Button -->
@@ -2514,7 +2514,7 @@ footer a {
                target="_blank" 
                class="btn btn-primary"
                style="background: linear-gradient(135deg, #da5b16 0%, #c8b2de 100%); box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);">
-                <span>ðŸ“©</span> Submit Idea
+                <span>📩</span> Submit Idea
             </a>
         </div>
     </div>
@@ -2531,13 +2531,13 @@ footer a {
             <p class="section-subtitle">Empowering students to create meaningful change through innovation</p>
             <div class="about-content">
                 <div class="about-card">
-                    <h3 >ðŸ¤ What is IEEE SB SIGHT Group?</h3>
+                    <h3 >🤝 What is IEEE SB SIGHT Group?</h3>
                     <p style="text-align: justify;">IEEE Special Interest Group on Humanitarian Technology (SIGHT) is a global network of IEEE volunteers dedicated to applying engineering knowledge and technological innovation to address real-world humanitarian and social challenges. SIGHT works closely with underserved communities, non-profit organizations, and local partners to co-create sustainable, ethical, and impactful solutions.
 
 The initiative focuses on improving quality of life by promoting community-driven development, empowering local stakeholders, and ensuring that technology is accessible, inclusive, and socially responsible. Through interdisciplinary collaboration, IEEE SIGHT encourages students and professionals to transform innovative ideas into practical solutions that create long-term positive change in society.</p>
                 </div>
                 <div class="about-card">
-                    <h3>ðŸ’­ Why This Competition?</h3>
+                    <h3>💭 Why This Competition?</h3>
                     <p style="text-align: justify;">We believe in empowering students to become innovators and changemakers who can create meaningful and lasting impact in society. This Competition is designed to provide a supportive platform where aspiring minds can explore, develop, and present technology-driven solutions to real-world social and humanitarian challenges.
 
 By encouraging creativity, critical thinking, and problem-solving, the Competition helps participants transform their ideas into actionable concepts. It also fosters collaboration, social responsibility, and innovation, inspiring students to use technology as a tool for positive change and sustainable development.</p>
@@ -2633,7 +2633,7 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
             <div class="focus-areas-grid">
                 <div class="focus-area-card">
                     <div class="card-header">
-                        <div class="focus-icon">âš¡</div>
+                        <div class="focus-icon">⚡</div>
                         <div class="card-title-group">
                             <h3>Affordable and Clean Energy</h3>
                             <span class="sdg-label">SDG 7</span>
@@ -2644,7 +2644,7 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
 
                 <div class="focus-area-card">
                     <div class="card-header">
-                        <div class="focus-icon">ðŸ¥</div>
+                        <div class="focus-icon">🏥</div>
                         <div class="card-title-group">
                             <h3>Health and Well-Being</h3>
                             <span class="sdg-label">SDG 3</span>
@@ -2655,7 +2655,7 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
 
                 <div class="focus-area-card">
                     <div class="card-header">
-                        <div class="focus-icon">ðŸ“š</div>
+                        <div class="focus-icon">📚</div>
                         <div class="card-title-group">
                             <h3>Quality Education</h3>
                             <span class="sdg-label">SDG 4</span>
@@ -2666,7 +2666,7 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
 
                 <div class="focus-area-card">
                     <div class="card-header">
-                        <div class="focus-icon">ðŸŒ</div>
+                        <div class="focus-icon">🌍</div>
                         <div class="card-title-group">
                             <h3>Climate Action and Environment</h3>
                             <span class="sdg-label">SDG 13</span>
@@ -2677,7 +2677,7 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
 
                 <div class="focus-area-card">
                     <div class="card-header">
-                        <div class="focus-icon">ðŸ’§</div>
+                        <div class="focus-icon">💧</div>
                         <div class="card-title-group">
                             <h3>Water, Sanitation, and Hygiene (WaSH)</h3>
                             <span class="sdg-label">SDG 6</span>
@@ -2689,7 +2689,7 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
 
             <!-- <div class="instructions-box">
                 <div class="instructions-header">
-                    <div class="instructions-icon">âš ï¸</div>
+                    <div class="instructions-icon">⚠️</div>
                     <h3>Important Instructions</h3>
                 </div>
                 <ul class="instructions-list">
@@ -2723,11 +2723,11 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
 
      <section id="prizes" class="prizes-section">
         <div class="container">
-            <h2>ðŸŽ Prizes & Benefits</h2>
+            <h2>🎁 Prizes & Benefits</h2>
             <p class="section-subtitle">Rewards and recognition for outstanding innovations</p>
             <div class="prizes-grid">
                  <div class="prize-card">
-                    <div class="prize-icon">ðŸ†</div>
+                    <div class="prize-icon">🏆</div>
                     <h3>Winner </h3>
                     <h3>5000.00 BDT </h3>
 
@@ -2737,7 +2737,7 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
 
 
                 <div class="prize-card">
-                    <div class="prize-icon">ðŸ¥ˆ</div>
+                    <div class="prize-icon">🥈</div>
                     <h3>1<sup>st</sup> Runner-up</h3>
                     <h3>3000.00 BDT </h3>
                     <p>Cash Prize &amp; Certificate</p>
@@ -2745,7 +2745,7 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
 
 
                <div class="prize-card">
-                    <div class="prize-icon">ðŸ¥‰</div>
+                    <div class="prize-icon">🥉</div>
                     <h3>2<sup>nd</sup> Runner-up</h3>
 
                       
@@ -2754,17 +2754,17 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
                 </div>
 
                 <div class="prize-card">
-                    <div class="prize-icon">ðŸ“œ</div>
+                    <div class="prize-icon">📜</div>
                     <h3>All Participants</h3>
                     <p>Participation Certificate</p>
                 </div>
                 <div class="prize-card">
-                    <div class="prize-icon">ðŸ¤</div>
+                    <div class="prize-icon">🤝</div>
                     <h3>Mentorship</h3>
                     <p>Guidance from IEEE professionals</p>
                 </div>
                 <div class="prize-card">
-                    <div class="prize-icon">ðŸŒ</div>
+                    <div class="prize-icon">🌐</div>
                     <h3>Networking</h3>
                     <p>Connect with industry experts</p>
                 </div>
@@ -2802,7 +2802,7 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
             <div class="eligibility-container">
                 <div class="eligibility-box">
                     <div class="eligibility-header">
-                        <div class="eligibility-emoji">ðŸ‘¥</div>
+                        <div class="eligibility-emoji">👥</div>
                         <h3>Who Can Participate?</h3>
                     </div>
                     <!-- <ul>
@@ -2831,7 +2831,7 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
 
                 <div class="eligibility-box">
                     <div class="eligibility-header">
-                        <div class="eligibility-emoji">âš–ï¸</div>
+                        <div class="eligibility-emoji">⚖️</div>
                         <h3>Important Rules</h3>
                     </div>
                     <ul>
@@ -2873,33 +2873,33 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
             <p class="section-subtitle">Simple and affordable registration for all participants</p>
             <div class="fee-container">
                 <div class="fee-card ieee-member">
-                    <div class="fee-badge">ðŸŒŸ RECOMMENDED</div>
-                    <div class="fee-icon">ðŸŽ“</div>
+                    <div class="fee-badge">🌟 RECOMMENDED</div>
+                    <div class="fee-icon">🎓</div>
                     <h3>IEEE Member</h3>
                     <div class="fee-amount">FREE</div>
                     <p class="fee-description">For registered IEEE members with valid membership</p>
                     <ul class="fee-benefits">
-                        <li>âœ“ No registration fee</li>
-                        <li>âœ“ Full Competition access</li>
-                        <li>âœ“ All prizes & benefits</li>
-                        <li>âœ“ IEEE networking opportunities</li>
+                        <li>✓ No registration fee</li>
+                        <li>✓ Full Competition access</li>
+                        <li>✓ All prizes & benefits</li>
+                        <li>✓ IEEE networking opportunities</li>
                     </ul>
                     
                 </div>
                 <div class="fee-card non-member">
-                    <div class="fee-icon">ðŸ‘¨â€ðŸŽ“</div>
+                    <div class="fee-icon">👨‍🎓</div>
                     <h3>Non-IEEE Member</h3>
-                    <div class="fee-amount">à§³250</div>
+                    <div class="fee-amount">৳250</div>
                     <p class="fee-description">For non-IEEE members and general participants</p>
                     <ul class="fee-benefits">
-                        <li>âœ“ One-time registration fee</li>
-                        <li>âœ“ Full Competition access</li>
-                        <li>âœ“ All prizes & benefits</li>
-                        <li>âœ“ Participation certificate</li>
+                        <li>✓ One-time registration fee</li>
+                        <li>✓ Full Competition access</li>
+                        <li>✓ All prizes & benefits</li>
+                        <li>✓ Participation certificate</li>
                     </ul>
                     <p style="position: center;">Or</p>
                     <a href="https://www.ieee.org/membership/join/index.html" target="_blank" class="join-ieee-btn">
-                        ðŸŒŸ Join IEEE Today
+                        🌟 Join IEEE Today
                     </a>
                     <p class="join-note">Not an IEEE member? Join now and participate for FREE!</p>
                 </div>
@@ -2972,7 +2972,7 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
                 <div class="instruction-step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h3>ðŸ“ Complete Online Registration</h3>
+                        <h3>📝 Complete Online Registration</h3>
                         <p>Fill out the registration form with your team or individual details. You'll receive a confirmation email with further instructions and submission guidelines.</p>
                     </div>
                 </div>
@@ -2980,17 +2980,17 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
                 <div class="instruction-step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h3>ðŸ“Š Prepare Your Submission</h3>
+                        <h3>📊 Prepare Your Submission</h3>
                         <p>Create ONE of the following formats to present your idea:</p>
                         <div class="submission-options">
                             <div class="option-card">
-                                <div class="option-icon">ðŸ“½ï¸</div>
+                                <div class="option-icon">📽️</div>
                                 <h4>Presentation Slides</h4>
                                 <p>8-12 slides (PDF or PowerPoint)</p>
                             </div>
                             <div class="option-divider">OR</div>
                             <div class="option-card">
-                                <div class="option-icon">ðŸŽ¨</div>
+                                <div class="option-icon">🎨</div>
                                 <h4>Infographic Poster</h4>
                                 <p>Single page visual presentation</p>
                             </div>
@@ -3001,13 +3001,13 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
                 <div class="instruction-step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h3>ðŸŽ¥ Record Your Pitch Video</h3>
+                        <h3>🎥 Record Your Pitch Video</h3>
                         <p>Create a <strong>3-minute video</strong> presenting your slides or poster. No need for high production quality - a simple voice-over explaining your idea will work perfectly!</p>
                         <div class="video-tips">
-                            <div class="tip-item">âœ“ Keep it clear and concise</div>
-                            <div class="tip-item">âœ“ Speak confidently about your solution</div>
-                            <div class="tip-item">âœ“ Highlight the social impact</div>
-                            <div class="tip-item">âœ“ Stay within 3 minutes</div>
+                            <div class="tip-item">✓ Keep it clear and concise</div>
+                            <div class="tip-item">✓ Speak confidently about your solution</div>
+                            <div class="tip-item">✓ Highlight the social impact</div>
+                            <div class="tip-item">✓ Stay within 3 minutes</div>
                         </div>
                     </div>
                 </div>
@@ -3015,20 +3015,20 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
                 <div class="instruction-step">
                     <div class="step-number">4</div>
                     <div class="step-content">
-                        <h3>â˜ï¸ Upload & Submit</h3>
+                        <h3>☁️ Upload & Submit</h3>
                         <p>Upload both your slides/poster and the recorded video to a Google Drive folder. Share the folder link with us using the submission form (provided after registration).</p>
                         <div class="upload-checklist">
-                            <div class="checklist-item">ðŸ“„ Presentation slides or poster</div>
-                            <div class="checklist-item">ðŸŽ¬ 3-minute pitch video</div>
-                            <div class="checklist-item">ðŸ”— Public sharing link enabled</div>
-                            <div class="checklist-item">âœ… Submission form completed</div>
+                            <div class="checklist-item">📄 Presentation slides or poster</div>
+                            <div class="checklist-item">🎬 3-minute pitch video</div>
+                            <div class="checklist-item">🔗 Public sharing link enabled</div>
+                            <div class="checklist-item">✅ Submission form completed</div>
                         </div>
                     </div>
                 </div>
         
 
             <div class="important-note">
-                <div class="note-icon">âš ï¸</div>
+                <div class="note-icon">⚠️</div>
                  
                 <div class="note-content">
                     <h4>Important Reminders</h4>
@@ -3205,9 +3205,9 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
             <p class="section-subtitle">Follow our journey from registration to winner announcement</p>
             <div class="timeline-tree">
                 <div class="timeline-item">
-                    <div class="timeline-dot">ðŸš€</div>
+                    <div class="timeline-dot">🚀</div>
                     <div class="timeline-content">
-                        <h3>ðŸ“… Registration </h3>
+                        <h3>📅 Registration </h3>
                         <div class="timeline-date">Open: January 10, 2026</div>
                         
                         <p>Start your journey by registering your team or individual participation. The doors are now open for all aspiring innovators!</p>
@@ -3216,16 +3216,16 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-dot">ðŸ“</div>
+                    <div class="timeline-dot">📝</div>
                     <div class="timeline-content">
-                        <h3>ðŸ“ Idea Submission Deadline</h3>
+                        <h3>📝 Idea Submission Deadline</h3>
                         <div class="timeline-date">January 31, 2026</div>
                         <p>Submit your complete idea proposal with all required details. Make sure to showcase your creativity and innovation!</p>
                     </div>
                 </div>
                 
    <div class="timeline-item">
-                    <div class="timeline-dot">ðŸ“</div>
+                    <div class="timeline-dot">📝</div>
                     <div class="timeline-content">
                          <h3>Result Announcement &amp; Award Ceremony </h3>
                         <div class="timeline-date"><b>(To be anounced)</b></div>
@@ -3258,23 +3258,23 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
             <p class="section-subtitle">How we evaluate your innovative ideas</p>
             <div class="criteria-grid">
                 <div class="criteria-item">
-                    <div class="criteria-icon">ðŸ’¡</div>
+                    <div class="criteria-icon">💡</div>
                     <h3>Innovation & Creativity</h3>
                     <p>Originality and uniqueness of the idea</p>
                 </div>
                 <div class="criteria-item">
-                    <div class="criteria-icon">ðŸŒ</div>
+                    <div class="criteria-icon">🌍</div>
                     <h3>Social Impact & Feasibility</h3>
                     <p>Potential to create positive change </p>
                 </div>
                 
                 <div class="criteria-item">
-                    <div class="criteria-icon">ðŸ”¬</div>
+                    <div class="criteria-icon">🔬</div>
                     <h3>Technical Approach</h3>
                     <p>Soundness of technical methodology</p>
                 </div>
                 <div class="criteria-item">
-                    <div class="criteria-icon">ðŸŽ¯</div>
+                    <div class="criteria-icon">🎯</div>
                     <h3>Presentation Quality</h3>
                     <p>Clarity and effectiveness of pitch</p>
                 </div>
@@ -3294,11 +3294,11 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
 
     <section id="contact">
         <div class="container">
-         <h2>ðŸ“ž Contact & FAQ</h2>
+         <h2>📞 Contact & FAQ</h2>
             <p class="section-subtitle">Get in touch with us or find answers to common questions</p>
             <div class="contact-info">
                 <div class="contact-card">
-    <div class="contact-icon">ðŸ“§</div>
+    <div class="contact-icon">📧</div>
     <h3>Email</h3>
     <p>
         <a href="mailto:ieeediusbsight@gmail.com" style="text-decoration: none; color: inherit;">
@@ -3308,7 +3308,7 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
 </div>
 
                <div class="contact-card">
-    <div class="contact-icon">ðŸ“±</div>
+    <div class="contact-icon">📱</div>
     <h3>Phone</h3>
     <p>
         <a href="tel:+8801701801788" style="text-decoration: none; color: inherit;">
@@ -3325,7 +3325,7 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
 
 
               <div class="contact-card">
-    <div class="contact-icon">ðŸ’¬</div>
+    <div class="contact-icon">💬</div>
     <h3>Facebook</h3>
     <p>
         <a href="https://www.facebook.com/profile.php?id=61582082533297" 
@@ -3338,7 +3338,7 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
 
             </div>
    <!-- 
-            <h3 style="text-align: center; margin-top: 4rem; font-size: 2rem; color: #1a4a7a;">â“ Frequently Asked Questions</h3>
+            <h3 style="text-align: center; margin-top: 4rem; font-size: 2rem; color: #1a4a7a;">❓ Frequently Asked Questions</h3>
             <div class="faq-container">
                 <div class="faq-item" onclick="toggleFAQ(this)">
                     <div class="faq-question">
@@ -3413,7 +3413,7 @@ By encouraging creativity, critical thinking, and problem-solving, the Competiti
         </div>
         <div class="footer-divider"></div>
         <p style="font-size: 1.2rem; font-weight: bold; margin-top: 2rem;">&copy; 2026 DIU IEEE SB SIGHT Group. All rights reserved.</p>
-        <p style="margin-top: 1rem; opacity: 0.8;">Building a better tomorrow through technology and innovation ðŸš€</p>
+        <p style="margin-top: 1rem; opacity: 0.8;">Building a better tomorrow through technology and innovation 🚀</p>
         
         
            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.5rem;">
@@ -3635,8 +3635,8 @@ const AnimationModule = (function() {
         const isMobile = window.innerWidth <= 768;
         
         if (isMobile) {
-            // Mobile à¦ à¦¸à¦¬ sections instantly visible
-            console.log('ðŸ“± Mobile detected - Animations disabled');
+            // Mobile এ সব sections instantly visible
+            console.log('📱 Mobile detected - Animations disabled');
             const sections = document.querySelectorAll('section');
             sections.forEach(section => {
                 section.style.opacity = '1';
@@ -3646,8 +3646,8 @@ const AnimationModule = (function() {
             return;
         }
 
-        // Desktop à¦à¦° à¦œà¦¨à§à¦¯ animations
-        console.log('ðŸ’» Desktop detected - Animations enabled');
+        // Desktop এর জন্য animations
+        console.log('💻 Desktop detected - Animations enabled');
         
         if (!('IntersectionObserver' in window)) {
             const sections = document.querySelectorAll('section');
@@ -3882,39 +3882,39 @@ function currentSlide(n) {
 // MAIN INITIALIZATION
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('ðŸš€ Initializing website modules...');
+    console.log('🚀 Initializing website modules...');
     
     try {
         ViewportModule.init();
-        console.log('âœ… Viewport module initialized');
+        console.log('✅ Viewport module initialized');
         
         NavigationModule.init();
-        console.log('âœ… Navigation module initialized');
+        console.log('✅ Navigation module initialized');
         
         FAQModule.init();
-        console.log('âœ… FAQ module initialized');
+        console.log('✅ FAQ module initialized');
         
         AnimationModule.init();
-        console.log('âœ… Animation module initialized');
+        console.log('✅ Animation module initialized');
         
         ScrollModule.init();
-        console.log('âœ… Scroll module initialized');
+        console.log('✅ Scroll module initialized');
         
         PerformanceModule.init();
-        console.log('âœ… Performance module initialized');
+        console.log('✅ Performance module initialized');
         
         SliderModule.init();
-        console.log('âœ… Slider module initialized');
+        console.log('✅ Slider module initialized');
         
-        console.log('âœ… All modules initialized successfully');
+        console.log('✅ All modules initialized successfully');
     } catch (error) {
-        console.error('âŒ Error initializing modules:', error);
+        console.error('❌ Error initializing modules:', error);
     }
 });
 
 window.addEventListener('load', function() {
     document.documentElement.style.scrollBehavior = 'smooth';
-    console.log('âœ… Page fully loaded');
+    console.log('✅ Page fully loaded');
 });
 
 document.addEventListener('click', function(e) {
