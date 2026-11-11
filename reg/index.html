@@ -1,0 +1,440 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Idea - IEEE DIU SB SIGHT Contest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0f4ff 0%, #dbeafe 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #122b55 0%, #0c1f3d 100%);
+            padding: 0.6rem 0;
+            box-shadow: 0 2px 15px rgba(18, 43, 85, 0.4);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            text-decoration: none;
+        }
+
+        nav .logo img {
+            height: 35px;
+            width: 35px;
+            object-fit: contain;
+        }
+
+        .back-btn {
+            background: rgba(96, 165, 250, 0.2);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .back-btn:hover {
+            background: rgba(96, 165, 250, 0.4);
+            transform: translateX(-5px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a4a7a 0%, #122b55 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,60 Q300,0 600,60 T1200,60 L1200,0 L0,0 Z" fill="rgba(96, 165, 250,0.15)"/></svg>') repeat-x;
+            animation: wave 20s linear infinite;
+        }
+
+        @keyframes wave {
+            0% { background-position: 0 0; }
+            100% { background-position: 1200px 0; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            width: 100%;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Guidelines Card */
+        .guidelines-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .guidelines-card h2 {
+            color: #1a4a7a;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .guideline-section {
+            margin-bottom: 2rem;
+        }
+
+        .guideline-section h3 {
+            color: #122b55;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .guideline-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .guideline-section li {
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            background: linear-gradient(135deg, #eff6ff 0%, #93c5fd 100%);
+            border-left: 4px solid #2670b8;
+            border-radius: 8px;
+            color: #122b55;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .guideline-section li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 3px 10px rgba(59, 130, 246, 0.2);
+        }
+
+        .important-note {
+            background: linear-gradient(135deg, #fff9e6 0%, #ffecb3 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 5px solid #ffc107;
+            margin-top: 1.5rem;
+        }
+
+        .important-note h4 {
+            color: #856404;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .important-note p {
+            color: #856404;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Form Container */
+        .form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 3px solid #eff6ff;
+        }
+
+        .form-header h2 {
+            color: #1a4a7a;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-header p {
+            color: #1e5a9e;
+            font-size: 1rem;
+        }
+
+        /* Google Form Iframe */
+        .form-wrapper {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-wrapper iframe {
+            width: 100%;
+            height: 1200px;
+            border: none;
+        }
+
+        /* Progress Steps */
+        .progress-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #eff6ff 0%, #93c5fd 100%);
+            border-radius: 15px;
+        }
+
+        .step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .step::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: -50%;
+            width: 100%;
+            height: 3px;
+            background: #3b82f6;
+            z-index: 0;
+        }
+
+        .step:last-child::after {
+            display: none;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #3b82f6, #2670b8);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.5rem;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 3px 10px rgba(59, 130, 246, 0.3);
+        }
+
+        .step-label {
+            color: #122b55;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #122b55, #0c1f3d);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guidelines-card {
+                position: static;
+            }
+
+            .progress-steps {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .step::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .form-wrapper iframe {
+                height: 1500px;
+            }
+
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .guidelines-card, .form-container {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="https://lh3.googleusercontent.com/d/1gjTgytjFynd4udSKZxtSrM7FKkPcE9P1" alt="IEEE DIU SIGHT Logo">
+                <span>IEEE DIU SB SIGHT Group</span>
+            </a>
+            <a href="../" class="back-btn">
+                <span>←</span> Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>🚀 Submit Your Innovative Idea</h1>
+            <p>Take the first step towards making a positive impact on society</p>
+            <p style="font-size: 0.9rem; margin-top: 1rem;">Fill out the form below with your project details. Make sure to review the guidelines before submitting.</p>
+        </div>
+    </section>
+
+    <div class="main-content">
+        <div class="progress-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-label">Registration</div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-label">Prepare Idea</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-label">Submit Form</div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-label">Upload Files</div>
+            </div>
+        </div>
+ 
+
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Idea Submission Form</h2>
+                    <p>Please fill out all required fields accurately</p>
+                </div>
+
+                <div class="form-wrapper">
+                    <!-- Replace this URL with your actual Google Form embed URL -->
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSeBI2kCQplB7LEX_bRkzZmG5x15mvze3PxzT4XNzFefzRDvRg/viewform?embedded=true"
+ 
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0">
+                        Loading…
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-size: 1.1rem; font-weight: bold;">&copy; 2026 IEEE DIU SB SIGHT Group. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;">Building a better tomorrow through technology and innovation 🚀</p>
+    </footer>
+</body>
+</html>
+
