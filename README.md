@@ -1,2 +1,1 @@
-
-[https://mehedi-hasan-soft-web-support.github.io/sight/](https://mehedi-hasan-soft-web-support.github.io/sight/)
+https://ea-arnob-07.github.io/IEEE-DIU-SB-SIGHT-WEBSITE/
