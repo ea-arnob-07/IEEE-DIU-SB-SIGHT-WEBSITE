@@ -1,3 +1,4 @@
 Step 2/36: Integrate optimized event gallery assets in ceremony directory
 Step 3/36: Implement core site script in assets/js/site.js for interactive controls
 Step 4/36: Refactor global reset and typography styles in assets/css/site.css
+Step 5/36: Add CSS custom properties and color palette variables in site.css
